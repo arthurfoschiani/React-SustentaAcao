@@ -1,0 +1,79 @@
+.Restaurantes {
+    width: 100%;
+}
+
+.Restaurantes>.search-area {
+    background-image: url('https://villalvafrutas.com.br/wp-content/uploads/2019/04/SITE-870x500.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -25vh;
+    width: 100%;
+    height: 50vh;
+    border-radius: 0 0 15px 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.Restaurantes>.search-area>h1 {
+    color: #ffffff;
+    font-size: 2.5em;
+    text-shadow: 0px 2px 6px rgba(0,0,0,0.84);
+    margin-left: 10%;
+    margin-bottom: 2vh;
+}
+
+.Restaurantes>.search-area>input {
+    margin-left: 10%;
+    font-size: 1.1em;
+    padding: 20px 15px;
+    border: none;
+    border-radius: 15px;
+    width: 30%;
+    box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.5);
+}
+
+.Restaurantes>.search-area>input:focus {
+    outline: none;
+}
+
+.filtro {
+    width: 80%;
+    margin: 0 auto 5vh;
+}
+
+.filtro>p {
+    color: #45c4b1ce;
+    font-weight: 500;
+    font-size: 1.5em;
+    margin: 5vh 0 2vh;
+}
+
+.filtro>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.filtro>div>button {
+    background-color: #ffffff;
+    border: 2px solid #45c4b1ce;
+    color: #45c4b1ce;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.filtro>div>button:hover {
+    background-color: #45c4b1ce;
+    color: #ffffff;
+}
+
+.filtro>div>.active {
+    background-color: #45c4b1ce;
+    color: #ffffff;
+}

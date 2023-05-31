@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    ;
+}
+
+nav {
+    width: 100%;
+    background-color: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0 5%;
+    position: fixed;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+nav h1 {
+    font-size: 2em;
+    color: #fff;
+}
+
+nav>ul {
+    display: flex;
+    font-size: 1.2em;
+    padding-right: 30%;
+}
+
+nav>ul>li>a {
+    font-size: 1em;
+    color: #fff;
+    padding: 18px 32px;
+    cursor: pointer;
+}
+
+nav>div {
+    display: flex;
+}
+
+nav>div>a {
+    padding: 10px 25px;
+    border: none;
+    border: 2px solid #fff;
+    background-color: #fff;
+    cursor: pointer;
+    color: #000000;
+}
+
+nav>div>.SignIn {
+    border-radius: 5px 0 0 5px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+nav>div>.SignUp {
+    border-radius: 0 5px 5px 0;
+}
+
+.section-banner>.banner {
+    background: #45c4b0;
+    background: linear-gradient(45deg, #45c4b0 0%, #9aeba3 100%);
+    height: 75vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-banner>.banner>div {
+    width: 50%;
+}
+
+.section-banner>.banner>div>h2 {
+    font-size: 5em;
+    width: 100%;
+    padding: 20vh 0 0 10%;
+}
+
+.section-banner>.banner>div>button {
+    margin: 5vh 0 0 10%;
+    background-color: #fff;
+    padding: 16px 48px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: 500;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.section-banner>.banner>div>button:hover {
+    background-color: #ffffff00;
+}
+
+.section-banner>.banner>img {
+    width: 50%;
+}
+
+.topics-banner {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    height: 25vh;
+}
+
+.topics-banner>.topic {
+    display: flex;
+    justify-content: space-between;
+}
+
+.topics-banner>.topic>.topic-image {
+    height: fit-content;
+    width: fit-content;
+    border-radius: 10px;
+    background-color: rgba(69, 196, 177, 0.63);
+}
+
+.topics-banner>.topic>.topic-image>img {
+    height: 50px;
+    padding: 10px;
+}
+
+.topics-banner>.topic>.topic-text {
+    padding: 0 8%;
+    text-align: justify;
+}
+
+.topics-banner>.topic>.topic-text>.topic-title {
+    font-size: 1.5em;
+    font-weight: 600;
+    padding-bottom: 2vh;
+}
+
+.restaurantes-home {
+    height: fit-content;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 5%;
+}
+
+.restaurantes-home>h1 {
+    font-size: 2.5em;
+    padding-top: 5vh;
+    text-align: center;
+    color: #45c4b0;
+}
+
+.restaurantes-home>p {
+    font-size: 1em;
+    width: 60%;
+    padding: 2vh 0 3vh;
+    line-height: 3vh;
+    margin: auto;
+    text-align: center;
+}
+
+.lista-restaurantes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.cada-restaurante {
+    background-image: linear-gradient(180deg, rgba(69, 196, 176, 0) 0%, rgba(36, 103, 93, 0) 44%, rgba(0, 0, 0, 1) 100%), url('https://media-cdn.tripadvisor.com/media/photo-s/16/a2/8b/3c/a-lifelong-dedication.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    height: 30vh;
+    width: 25%;
+    margin: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.5);
+}
+
+.cada-restaurante:hover {
+    transform: translateY(-10px);
+}
+
+.cada-restaurante>p {
+    color: #fff;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.cada-restaurante>div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.cada-restaurante>div>div {
+    background-color: #45c4b1ce;
+    color: #fff;
+    margin-right: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.restaurantes-home>a {
+    border: none;
+    background-color: #ffffff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #45c4b0;
+    font-size: 1.4em;
+    font-weight: 600;
+    margin: 4vh auto 5vh;
+    cursor: pointer;
+}
+
+.restaurantes-home>a>img {
+    transform: rotate(180deg);
+    height: 2em;
+    padding-right: 20px;
+}
+
+.artigos {
+    height: fit-content;
+    margin-top: 15vh;
+}
+
+.artigos .blocoartigo {
+    width: 100%;
+    height: 70vh;
+    background-color: #45c4b0;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.artigos .blocoartigo .imgFlatCategoria {
+    height: 85vh;
+    position: relative;
+    bottom: 15vh;
+    left: 10em;
+}
+
+.artigos .blocoartigo .campoartigo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 85%;
+    margin: auto 0;
+    margin-left: 25em;
+    width: 30%;
+}
+
+.artigos .blocoartigo .campoartigo h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+    font-weight: 200;
+    color: #ffffff;
+}
+
+.artigos .blocoartigo .campoartigo h3 strong {
+    font-weight: 500;
+}
+
+.artigos .blocoartigo .campoartigo .descricaoartigo {
+    color: #fff;
+    width: 90%;
+}
+
+.artigos .blocoartigo .campoartigo .checkartigo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.artigos .blocoartigo .campoartigo .checkartigo img {
+    height: 3vh;
+}
+
+.artigos .blocoartigo .campoartigo .checkartigo p {
+    width: 80%;
+    font-size: 1.2em;
+    padding-left: 20px;
+    color: #fff;
+}
+
+.artigos .blocoartigo .campoartigo .checkartigo:hover {
+    transform: scale(1.1) translateX(30px);
+
+}
+
+.artigos .blocoartigo .campoartigo>a {
+    border: none;
+    background-color: #ffffff00;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-top: 3vh;
+    cursor: pointer;
+}
+
+.artigos .blocoartigo .campoartigo>a>img {
+    transform: rotate(180deg);
+    height: 2em;
+    padding-right: 20px;
+}
+
+.parceiros {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.parceiros>h1 {
+    font-size: 2.5em;
+    padding-top: 5vh;
+    text-align: center;
+    color: #000000;
+}
+
+.parceiros>p {
+    font-size: 1em;
+    width: 60%;
+    padding: 0 0 3vh;
+    line-height: 3vh;
+    margin: auto;
+    text-align: center;
+    color: #7c7c7c;
+}
+
+.parceiros>.line {
+    width: 50%;
+    height: 2px;
+    background-color: #45c4b0;
+}
+
+.parceiros>.marcas {
+    display: flex;
+    justify-content: center;
+}
+
+.parceiros>.marcas>img {
+    height: 7vh;
+    margin: 4vh 4vh 8vh;
+    transition: 0.3s;
+}
+
+.parceiros>.marcas>img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background: -webkit-linear-gradient(0deg, #45c4b0 0%, #9aeba3 100%);
+    color: #fff;
+    z-index: 20;
+    position: relative;
+}
+
+footer .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 0;
+}
+
+footer .row>a {
+    color: #ffffff;
+    font-size: 1.2em;
+    padding: 0 20px;
+}
+
+footer p {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.2em;
+    padding-bottom: 5vh;
+}
