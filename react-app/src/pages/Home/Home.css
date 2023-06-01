@@ -283,23 +283,23 @@ nav>div>.SignUp {
     flex-direction: row;
     align-items: center;
     width: 90%;
-    transition: 0.3s;
+    transition: 0.2s;
     cursor: pointer;
 }
 
 .artigos .blocoartigo .campoartigo .checkartigo img {
-    height: 3vh;
+    height: 2vh;
+    margin-left: 20px;
 }
 
 .artigos .blocoartigo .campoartigo .checkartigo p {
-    width: 80%;
     font-size: 1.2em;
     padding-left: 20px;
     color: #fff;
 }
 
 .artigos .blocoartigo .campoartigo .checkartigo:hover {
-    transform: scale(1.1) translateX(30px);
+    transform: scale(1.1) translateX(20px);
 
 }
 

@@ -1,0 +1,269 @@
+.restaurante-individual {
+    width: 100%;
+    margin: auto;
+}
+
+.restaurante-individual>.img-rest {
+    background-image: url('https://media-cdn.tripadvisor.com/media/photo-s/16/a2/8b/3c/a-lifelong-dedication.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 75%;
+    height: 40vh;
+    margin: auto;
+    margin-top: 10vh;
+    box-shadow: 0px 4px 10px -1px rgba(134, 134, 134, 0.5);
+}
+
+.restaurante-individual>.header-rest {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 10px -1px rgba(134, 134, 134, 0.5);
+    box-sizing: border-box;
+    padding: 40px 50px;
+    margin-top: 2vh;
+    width: 75%;
+}
+
+.restaurante-individual>.header-rest>div>div {
+    display: flex;
+    align-items: center;
+}
+
+.restaurante-individual>.header-rest>div>h1 {
+    font-size: 2.5em;
+    margin: 0 0 1vh;
+    color: #45c4b0;
+}
+
+.restaurante-individual>.header-rest>div>p {
+    font-size: 1.2em;
+}
+
+.restaurante-individual>.header-rest>.comment-aval {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.restaurante-individual>.header-rest>.comment-aval>svg {
+    margin: 10px 0;
+}
+
+.restaurante-individual>.header-rest>.comment-aval>svg,
+.restaurante-individual>.header-rest>.comment-aval>div>svg {
+    height: 3vh;
+    width: fit-content;
+    cursor: pointer;
+    color: #45c4b0;
+}
+
+.restaurante-individual>.header-rest>.comment-aval>div>svg {
+    color: #000;
+}
+
+.restaurante-individual>.header-rest>.comment-aval>div {
+    display: flex;
+    align-items: center;
+}
+
+.restaurante-individual>.header-rest>.comment-aval>div>p {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.line-restaurante {
+    position: relative;
+    background-color: #45c4b0;
+    width: 100%;
+    margin: 5vh 0;
+    box-sizing: border-box;
+    padding: 50px;
+    text-align: center;
+    color: #fff;
+    transition: .2s;
+}
+
+.line-restaurante>h2 {
+    font-size: 2em;
+    margin-bottom: 1vh;
+}
+
+.line-restaurante>span {
+    display: block;
+}
+
+.line-restaurante>div {
+    width: 70%;
+    margin: auto;
+}
+
+.line-restaurante>div>div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2vh 0;
+}
+
+.line-restaurante>div>div>button {
+    background-color: #45c4b100;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 1vh 0;
+    margin-left: 25px;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.line-restaurante>div>div>button:hover {
+    color: #45c4b0;
+    background-color: #fff;
+}
+
+.line-restaurante>div>div>.active {
+    color: #45c4b0;
+    background-color: #fff;
+}
+
+.line-restaurante>div>p {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.comentarios {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.comentarios>h2 {
+    text-align: center;
+    font-size: 2em;
+}
+
+.comentarios>p {
+    text-align: center;
+    font-size: 1.1em;
+    margin: 1vh 0 4vh;
+}
+
+.comentario {
+    width: 50%;
+    box-shadow: 0px 4px 20px -1px rgba(134, 134, 134, 0.5);
+    box-sizing: border-box;
+    padding: 30px 40px;
+    margin: 0 auto 4vh;
+}
+
+.comentario>h4 {
+    font-size: 1.2em;
+    color: #45c4b0;
+}
+
+.comentario>p {
+    font-size: 1em;
+    margin-top: 5px;
+}
+
+.escrever-comentario {
+    width: 50%;
+    margin: 0 auto 4vh;
+}
+
+.escrever-comentario>input {
+    box-shadow: 0px 4px 20px -1px rgba(134, 134, 134, 0.5);
+    box-sizing: border-box;
+    border: none;
+    padding: 15px 20px;
+    width: 80%;
+}
+
+.escrever-comentario>input:focus {
+    outline: none;
+    border-color: #45c4b0;
+    box-shadow: 0 0 0 0.2rem #51d6c4;
+}
+
+.escrever-comentario>button {
+    background-color: #45c4b1;
+    color: #fff;
+    border: 2px solid #45c4b1;
+    height: 100%;
+    width: 20%;
+    transition: .2s;
+    padding: 10px 0;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.escrever-comentario>button:hover {
+    color: #45c4b0;
+    background-color: #fff;
+}
+
+.endereco {
+    background-color: #45c4b1;
+    width: 30%;
+    margin: 5vh auto;
+    text-align: center;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 40px;
+    box-shadow: 0px 4px 10px -1px rgba(134, 134, 134, 0.5);
+}
+
+.endereco>h2 {
+    font-size: 2em;
+}
+
+.endereco>p {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 3vh;
+}
+
+.avaliacao>h2 {
+    text-align: center;
+    font-weight: 600;
+}
+
+.avaliacao>.estrelas {
+    text-align: center;
+}
+
+.avaliacao>.estrelas>span {
+    font-size: 2em;
+    cursor: pointer;
+    color: #45c4b1;
+}
+
+.avaliacao>button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: 2px solid #000;
+    transition: .2s;
+    margin: 2vh auto 0;
+}
+
+.avaliacao>button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.avaliacao {
+    margin-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,5 +1,7 @@
 import './Restaurantes.css';
 
+import { Link } from 'react-router-dom';
+
 export default function Restaurantes() {
   return (
     <>
@@ -24,28 +26,28 @@ export default function Restaurantes() {
           </div>
         </div>
         <div className="lista-restaurantes">
-          <div className="cada-restaurante">
+          <Link to='/restaurante-individual' className="cada-restaurante">
             <p>Vegan Food</p>
             <div>
               <div>Economia de Água</div>
               <div>Produção Local</div>
             </div>
-          </div>
-          <div className="cada-restaurante">
+          </Link>
+          <Link className="cada-restaurante">
             <p>Vegan Food</p>
             <div>
               <div>Economia de Água</div>
               <div>Produção Local</div>
               <div>Uso de Embalagens Sustentáveis</div>
             </div>
-          </div>
-          <div className="cada-restaurante">
+          </Link>
+          <Link className="cada-restaurante">
             <p>Vegan Food</p>
             <div>
               <div>Economia de Água</div>
               <div>Produção Local</div>
             </div>
-          </div>
+          </Link>
         </div>
       </section>
     </>

@@ -91,40 +91,40 @@ export default function Home() {
                         <h3>Venha conhecer o nosso <strong>Blog</strong></h3>
                         <p className="descricaoartigo">Nele você encontrará artigos sobre diversos assuntos</p>
                         <div className="checkartigo">
-                            <img src="https://img.icons8.com/ios/100/ffffff/topic--v1.png" alt="topic--v1" />
-                            <p>Tecnologias inovadoras.</p>
+                            <p>Tecnologias inovadoras</p>
+                            <img src="https://img.icons8.com/ios-glyphs/90/ffffff/chevron-right.png" alt="chevron-right" />
                         </div>
                         <div className="checkartigo">
-                            <img src="https://img.icons8.com/ios/100/ffffff/topic--v1.png" alt="topic--v1" />
-                            <p>Combate à fome mundial.</p>
+                            <p>Combate à fome mundial</p>
+                            <img src="https://img.icons8.com/ios-glyphs/90/ffffff/chevron-right.png" alt="chevron-right" />
                         </div>
                         <div className="checkartigo">
-                            <img src="https://img.icons8.com/ios/100/ffffff/topic--v1.png" alt="topic--v1" />
-                            <p>Escassez de alimentos.</p>
+                            <p>Escassez de alimentos</p>
+                            <img src="https://img.icons8.com/ios-glyphs/90/ffffff/chevron-right.png" alt="chevron-right" />
                         </div>
                         <div className="checkartigo">
-                            <img src="https://img.icons8.com/ios/100/ffffff/topic--v1.png" alt="topic--v1" />
-                            <p>IA generativa.</p>
+                            <p>IA generativa</p>
+                            <img src="https://img.icons8.com/ios-glyphs/90/ffffff/chevron-right.png" alt="chevron-right" />
                         </div>
                         <div className="checkartigo">
-                            <img src="https://img.icons8.com/ios/100/ffffff/topic--v1.png" alt="topic--v1" />
-                            <p>Agricultura vertical.</p>
+                            <p>Agricultura vertical</p>
+                            <img src="https://img.icons8.com/ios-glyphs/90/ffffff/chevron-right.png" alt="chevron-right" />
                         </div>
                         <div className="checkartigo">
-                            <img src="https://img.icons8.com/ios/100/ffffff/topic--v1.png" alt="topic--v1" />
-                            <p>Aquaponia.</p>
+                            <p>Aquaponia</p>
+                            <img src="https://img.icons8.com/ios-glyphs/90/ffffff/chevron-right.png" alt="chevron-right" />
                         </div>
                         <div className="checkartigo">
-                            <img src="https://img.icons8.com/ios/100/ffffff/topic--v1.png" alt="topic--v1" />
-                            <p>Hidroponia.</p>
+                            <p>Hidroponia</p>
+                            <img src="https://img.icons8.com/ios-glyphs/90/ffffff/chevron-right.png" alt="chevron-right" />
                         </div>
                         <div className="checkartigo">
-                            <img src="https://img.icons8.com/ios/100/ffffff/topic--v1.png" alt="topic--v1" />
-                            <p>Distribuição de alimentos.</p>
+                            <p>Distribuição de alimentos</p>
+                            <img src="https://img.icons8.com/ios-glyphs/90/ffffff/chevron-right.png" alt="chevron-right" />
                         </div>
                         <div className="checkartigo">
-                            <img src="https://img.icons8.com/ios/100/ffffff/topic--v1.png" alt="topic--v1" />
-                            <p>Melhorias na distribuição de alimentos.</p>
+                            <p>Melhorias na distribuição de alimentos</p>
+                            <img src="https://img.icons8.com/ios-glyphs/90/ffffff/chevron-right.png" alt="chevron-right" />
                         </div>
                         <Link to='/blog'>Veja todos os artigos <img src="https://img.icons8.com/ios-glyphs/90/ffffff/arrow-pointing-left--v2.png" alt="arrow-pointing-left--v2" /></Link>
                     </div>
