@@ -2,9 +2,14 @@ import './Restaurantes.css';
 
 import { Link } from 'react-router-dom';
 
+import Menu from '../../components/Menu/Menu';
+import Footer from '../../components/Footer/Footer';
+import CardRestaurante from '../../components/CardRestaurante/CardRestaurante';
+
 export default function Restaurantes() {
   return (
     <>
+      <Menu></Menu>
       <section className='Restaurantes'>
         <div className='search-area'>
           <h1>Busque por restaurantes que você deseja</h1>
@@ -26,30 +31,18 @@ export default function Restaurantes() {
           </div>
         </div>
         <div className="lista-restaurantes">
-          <Link to='/restaurante-individual' className="cada-restaurante">
-            <p>Vegan Food</p>
-            <div>
-              <div>Economia de Água</div>
-              <div>Produção Local</div>
-            </div>
+          <Link to='/restaurante-individual'>
+            <CardRestaurante></CardRestaurante>
           </Link>
-          <Link className="cada-restaurante">
-            <p>Vegan Food</p>
-            <div>
-              <div>Economia de Água</div>
-              <div>Produção Local</div>
-              <div>Uso de Embalagens Sustentáveis</div>
-            </div>
+          <Link to='/restaurante-individual'>
+            <CardRestaurante></CardRestaurante>
           </Link>
-          <Link className="cada-restaurante">
-            <p>Vegan Food</p>
-            <div>
-              <div>Economia de Água</div>
-              <div>Produção Local</div>
-            </div>
+          <Link to='/restaurante-individual'>
+            <CardRestaurante></CardRestaurante>
           </Link>
         </div>
       </section>
+      <Footer></Footer>
     </>
   );
 }

@@ -1,0 +1,65 @@
+nav {
+    width: 100%;
+    background-color: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0 5%;
+    position: absolute;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.white {
+    background-color: #fff;
+}
+
+.font-black {
+    color: #000;
+    text-shadow: none;
+}
+
+nav>a {
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 0px 2px 10px rgba(0,0,0,1);
+    font-weight: 700;
+}
+
+nav>ul {
+    display: flex;
+    font-size: 1.2em;
+    padding-right: 30%;
+}
+
+nav>ul>li>a {
+    font-size: 1em;
+    color: #fff;
+    padding: 18px 32px;
+    cursor: pointer;
+    font-weight: 500;
+    text-shadow: 0px 2px 10px rgba(0,0,0,1);
+}
+
+nav>div {
+    display: flex;
+}
+
+nav>div>a {
+    padding: 10px 25px;
+    border: none;
+    border: 2px solid #fff;
+    background-color: #fff;
+    cursor: pointer;
+    color: #000000;
+}
+
+nav>div>.SignIn {
+    border-radius: 5px 0 0 5px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+nav>div>.SignUp {
+    border-radius: 0 5px 5px 0;
+}

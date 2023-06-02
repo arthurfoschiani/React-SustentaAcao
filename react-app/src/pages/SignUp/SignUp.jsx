@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import './SignUp.css';
+
+import Menu from '../../components/Menu/Menu';
+
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 export default function SignUp() {
@@ -80,6 +83,7 @@ export default function SignUp() {
 
   return (
     <>
+      <Menu></Menu>
       <section className='sign-up'>
         <div>
           <h1>Cadastre-se em nossa plataforma</h1>

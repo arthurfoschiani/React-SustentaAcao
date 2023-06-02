@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import './SignIn.css';
 
+import Menu from '../../components/Menu/Menu';
+
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 export default function RestauranteIndividual() {
@@ -45,6 +47,7 @@ export default function RestauranteIndividual() {
 
   return (
     <>
+      <Menu></Menu>
       <section className='sign-in'>
         <img src="https://blush.design/api/download?shareUri=O2Rq8ZgGdobvoD-X&c=Bottom_0%7E89c5cc_Hair_0%7Ee8e1e1_Skin_0%7E57331f_Top_0%7Ea8e5ba&w=800&h=800&fm=png" alt="" />
         <div>

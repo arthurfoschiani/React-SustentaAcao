@@ -1,0 +1,74 @@
+.artigo-individual-blog {
+    width: 100%;
+    height: fit-content;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px -1px rgba(134, 134, 134, 0.5);
+    transition: 0.4s;
+    cursor: pointer;
+    color: #000;
+}
+
+.artigo-individual-blog:hover {
+    transform: translateY(-10px);
+}
+
+.artigo-individual-blog>img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 0 0 10px 10px;
+}
+
+.artigo-individual-blog>div {
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.artigo-individual-blog>div>span {
+    background-color: #9aeba38e;
+    padding: 5px 15px;
+    width: fit-content;
+    color: #000;
+}
+
+.artigo-individual-blog>div>h2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.5em;
+}
+
+.artigo-individual-blog>div>h3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.artigo-individual-blog>div>button {
+    width: fit-content;
+    background-color: #45c4b100;
+    border: 2px solid #45c4b0;
+    color: #45c4b0;
+    padding: 5px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.artigo-individual-blog>div>button>img {
+    height: 2vh;
+    padding-left: 10px;
+}

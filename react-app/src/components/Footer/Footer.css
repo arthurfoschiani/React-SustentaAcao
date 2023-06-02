@@ -1,0 +1,26 @@
+footer {
+    background: -webkit-linear-gradient(0deg, #45c4b0 0%, #9aeba3 100%);
+    color: #fff;
+    z-index: 20;
+    position: relative;
+}
+
+footer .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 0;
+}
+
+footer .row>a {
+    color: #ffffff;
+    font-size: 1.2em;
+    padding: 0 20px;
+}
+
+footer p {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.2em;
+    padding-bottom: 5vh;
+}

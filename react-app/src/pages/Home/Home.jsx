@@ -2,20 +2,14 @@ import './Home.css';
 
 import { Link } from 'react-router-dom'
 
+import Menu from '../../components/Menu/Menu';
+import Footer from '../../components/Footer/Footer';
+import CardRestaurante from '../../components/CardRestaurante/CardRestaurante';
+
 export default function Home() {
     return (
         <>
-            <nav>
-                <h1>SustentaAção</h1>
-                <ul>
-                    <li><Link to='/restaurantes'>Restaurantes</Link></li>
-                    <li><Link to='/blog'>Blog</Link></li>
-                </ul>
-                <div>
-                    <Link className='SignIn' to='/sign-in'>Sign In</Link>
-                    <Link className='SignUp' to='/sign-up'>Sign Up</Link>
-                </div>
-            </nav>
+            <Menu></Menu>
             <section className="section-banner">
                 <div className="banner">
                     <div>
@@ -58,28 +52,15 @@ export default function Home() {
                 <h1>Conheça restaurantes sustentáveis</h1>
                 <p>Nós fornecemos uma seção especial na qual é dedicada a listar restaurantes te dizemos se eles contribuem com práticas sustentáveis.</p>
                 <div className="lista-restaurantes">
-                    <div className="cada-restaurante">
-                        <p>Vegan Food</p>
-                        <div>
-                            <div>Economia de Água</div>
-                            <div>Produção Local</div>
-                        </div>
-                    </div>
-                    <div className="cada-restaurante">
-                        <p>Vegan Food</p>
-                        <div>
-                            <div>Economia de Água</div>
-                            <div>Produção Local</div>
-                            <div>Uso de Embalagens Sustentáveis</div>
-                        </div>
-                    </div>
-                    <div className="cada-restaurante">
-                        <p>Vegan Food</p>
-                        <div>
-                            <div>Economia de Água</div>
-                            <div>Produção Local</div>
-                        </div>
-                    </div>
+                    <Link to='restaurante-individual'>
+                        <CardRestaurante></CardRestaurante>
+                    </Link>
+                    <Link to='restaurante-individual'>
+                        <CardRestaurante></CardRestaurante>
+                    </Link>
+                    <Link to='restaurante-individual'>
+                        <CardRestaurante></CardRestaurante>
+                    </Link>
                 </div>
                 <Link to='/restaurantes'>Veja mais restaurantes <img src="https://img.icons8.com/ios-glyphs/90/45c4b0/arrow-pointing-left--v2.png" alt="arrow-pointing-left--v2" /></Link>
             </section >
@@ -90,44 +71,61 @@ export default function Home() {
                     <div className="campoartigo">
                         <h3>Venha conhecer o nosso <strong>Blog</strong></h3>
                         <p className="descricaoartigo">Nele você encontrará artigos sobre diversos assuntos</p>
-                        <div className="checkartigo">
+                        <Link to='/blog' className="checkartigo">
                             <p>Tecnologias inovadoras</p>
                             <img src="https://img.icons8.com/ios-glyphs/90/ffffff/chevron-right.png" alt="chevron-right" />
-                        </div>
-                        <div className="checkartigo">
+                        </Link>
+                        <Link to='/blog' className="checkartigo">
                             <p>Combate à fome mundial</p>
                             <img src="https://img.icons8.com/ios-glyphs/90/ffffff/chevron-right.png" alt="chevron-right" />
-                        </div>
-                        <div className="checkartigo">
+                        </Link>
+                        <Link to='/blog' className="checkartigo">
                             <p>Escassez de alimentos</p>
                             <img src="https://img.icons8.com/ios-glyphs/90/ffffff/chevron-right.png" alt="chevron-right" />
-                        </div>
-                        <div className="checkartigo">
+                        </Link>
+                        <Link to='/blog' className="checkartigo">
                             <p>IA generativa</p>
                             <img src="https://img.icons8.com/ios-glyphs/90/ffffff/chevron-right.png" alt="chevron-right" />
-                        </div>
-                        <div className="checkartigo">
+                        </Link>
+                        <Link to='/blog' className="checkartigo">
                             <p>Agricultura vertical</p>
                             <img src="https://img.icons8.com/ios-glyphs/90/ffffff/chevron-right.png" alt="chevron-right" />
-                        </div>
-                        <div className="checkartigo">
+                        </Link>
+                        <Link to='/blog' className="checkartigo">
                             <p>Aquaponia</p>
                             <img src="https://img.icons8.com/ios-glyphs/90/ffffff/chevron-right.png" alt="chevron-right" />
-                        </div>
-                        <div className="checkartigo">
+                        </Link>
+                        <Link to='/blog' className="checkartigo">
                             <p>Hidroponia</p>
                             <img src="https://img.icons8.com/ios-glyphs/90/ffffff/chevron-right.png" alt="chevron-right" />
-                        </div>
-                        <div className="checkartigo">
+                        </Link>
+                        <Link to='/blog' className="checkartigo">
                             <p>Distribuição de alimentos</p>
                             <img src="https://img.icons8.com/ios-glyphs/90/ffffff/chevron-right.png" alt="chevron-right" />
-                        </div>
-                        <div className="checkartigo">
+                        </Link>
+                        <Link to='/blog' className="checkartigo">
                             <p>Melhorias na distribuição de alimentos</p>
                             <img src="https://img.icons8.com/ios-glyphs/90/ffffff/chevron-right.png" alt="chevron-right" />
-                        </div>
-                        <Link to='/blog'>Veja todos os artigos <img src="https://img.icons8.com/ios-glyphs/90/ffffff/arrow-pointing-left--v2.png" alt="arrow-pointing-left--v2" /></Link>
+                        </Link>
+                        <Link to='/blog' className='btn-todos-artigos'>Veja todos os artigos <img src="https://img.icons8.com/ios-glyphs/90/ffffff/arrow-pointing-left--v2.png" alt="arrow-pointing-left--v2" /></Link>
                     </div>
+                </div>
+            </section>
+            <section className='introducao'>
+                <p>Bem-vindo à nossa plataforma, uma iniciativa dedicada a combater a fome mundial e a escassez de alimentos, ao mesmo tempo em que promove a sustentabilidade na indústria de alimentos. Nosso objetivo é informar, inspirar e mobilizar nossa comunidade para fazer a diferença.</p>
+                <p>Em nosso blog, trazemos a você uma variedade de artigos sobre tecnologias inovadoras, agricultura sustentável, IA generativa e práticas agrícolas avançadas, como agricultura vertical, aquaponia e hidroponia. Procuramos conscientizar sobre as questões críticas que o mundo enfrenta em relação à fome e à distribuição de alimentos, além de destacar soluções inovadoras que estão sendo implementadas globalmente.</p>
+                <p>Além disso, temos orgulho em apresentar uma lista crescente de restaurantes que implementam práticas sustentáveis em suas operações diárias. Ao apoiar estes estabelecimentos, você contribui para um futuro alimentar mais verde e justo. Como usuário, você pode avaliar e comentar sobre os restaurantes, compartilhando suas experiências com a comunidade.</p>
+                <p>Junte-se a nós nesta jornada para promover um futuro onde ninguém passe fome e todos tenham acesso a alimentos sustentáveis e nutritivos. Juntos, podemos fazer a diferença.</p>
+            </section>
+            <section className='sugestoes'>
+                <div className='sugestoes-textos'>
+                    <h2>Nos mande sugestões, perguntas ou comentários...</h2>
+                    <p>Estamos abertos para ouvir vocês.</p>
+                </div>
+                <div className='sugestoes-inputs'>
+                    <input placeholder='Digite o seu e-mail' type='email' className='email-sugestoes' />
+                    <textarea placeholder='Escreva aqui...' className='sugestoes' />
+                    <button>Enviar</button>
                 </div>
             </section>
             <section className='parceiros'>
@@ -141,16 +139,7 @@ export default function Home() {
                     <img src="https://www.cacafome.com.br/assets/img/footer-logo.png" alt="" />
                 </div>
             </section>
-            <footer>
-                <div className="row links_uteis">
-                    <h2>Links úteis:</h2>
-                    <a href="/">Restaurantes</a>
-                    <a href="/">Blog</a>
-                    <a href="/">Sign In</a>
-                    <a href="/">Sign Up</a>
-                </div>
-                <p>SustentaAção | Todos os direitos reservados <sup>©</sup></p>
-            </footer>
+            <Footer></Footer>
         </>
     );
 }

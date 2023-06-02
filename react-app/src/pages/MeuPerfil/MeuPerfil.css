@@ -1,0 +1,115 @@
+.meu-perfil {
+    width: 100%;
+    display: flex;
+}
+
+.meu-perfil>.img-meu-perfil {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.meu-perfil>.img-meu-perfil>img {
+    height: 80vh;
+    margin-top: 10vh;
+}
+
+.editar-perfil {
+    background-color: #fff;
+    width: 40%;
+    box-sizing: border-box;
+    padding: 50px 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-shadow: 0px 6px 20px -8px rgba(0, 0, 0, 0.62);
+}
+
+.editar-perfil>h1 {
+    font-size: 2em;
+    font-weight: 700;
+    width: 70%;
+}
+
+.editar-perfil>div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 1.5em;
+    width: 100%;
+}
+
+.editar-perfil>div>label {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    transition: all 0.2s ease-out;
+    pointer-events: none;
+    color: #696F79;
+    font-size: 16px;
+}
+
+.editar-perfil summary {
+    color: #8692A6;
+    font-size: 16px;
+    width: 80%;
+    font-weight: 100;
+    margin-top: 1vh;
+}
+
+.editar-perfil>hr {
+    width: 80%;
+    border: 1px solid #cecece;
+    margin: 3vh 0;
+}
+
+.editar-perfil>div>label.active {
+    transform: translateY(-24px);
+    font-size: 0.8em;
+    color: #45c4b0;
+    background-color: #ffffff;
+    padding: 0 8px;
+    left: 10px;
+}
+
+.editar-perfil>div>input {
+    border: none;
+    border: 1px solid #696F79;
+    border-radius: 6px;
+    box-sizing: border-box;
+    padding: 18px;
+    padding-right: 13%;
+    font-size: 1em;
+    width: 100%;
+    transition: .2s;
+}
+
+.editar-perfil>div>input:focus {
+    outline: none;
+    border-color: #45c4b0;
+    box-shadow: 0 0 0 0.2rem #51d6c4;
+}
+
+.editar-perfil>button {
+    box-sizing: border-box;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    width: 50%;
+    font-size: 1.1em;
+    font-weight: 500;
+    background-color: #45c4b0;
+    cursor: pointer;
+    border: 2px solid #45c4b0;
+    transition: 0.2s;
+    box-shadow: 0px 4px 8px -2px rgba(0, 0, 0, 0.62);
+}
+
+.editar-perfil>button:hover {
+    background-color: #45c4b100;
+    color: #45c4b0;
+}

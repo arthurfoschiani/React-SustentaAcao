@@ -7,6 +7,7 @@
 }
 
 .sign-up>img {
+    margin-top: 10vh;
     margin-left: 5%;
     transform: scale(-1, 1);
 }

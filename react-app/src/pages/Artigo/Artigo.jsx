@@ -1,10 +1,13 @@
 import './Artigo.css';
 
+import Menu from '../../components/Menu/Menu';
+
 import { FaRegHeart } from 'react-icons/fa';
 
 export default function Artigo() {
   return (
     <>
+      <Menu></Menu>
       <section className='artigo'>
         <div className='img-fundo' />
         <div className='article'>

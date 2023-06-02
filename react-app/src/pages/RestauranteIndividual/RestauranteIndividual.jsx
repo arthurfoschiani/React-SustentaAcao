@@ -2,11 +2,14 @@ import './RestauranteIndividual.css';
 
 import { AiFillStar } from "react-icons/ai";
 
+import Menu from '../../components/Menu/Menu';
+
 import Avaliacao from './../../components/Avaliacao/Avaliacao';
 
 export default function RestauranteIndividual() {
   return (
     <>
+      <Menu isWhite></Menu>
       <section className='restaurante-individual'>
         <div className='img-rest'></div>
         <div className='header-rest'>
