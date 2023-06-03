@@ -1,12 +1,16 @@
+import React, { useEffect, useState } from 'react';
 import './RestauranteIndividual.css';
 
 import { AiFillStar } from "react-icons/ai";
+import axios from 'axios';
 
 import Menu from '../../components/Menu/Menu';
 
 import Avaliacao from './../../components/Avaliacao/Avaliacao';
 
 export default function RestauranteIndividual() {
+  
+
   return (
     <>
       <Menu isWhite></Menu>
@@ -37,7 +41,7 @@ export default function RestauranteIndividual() {
         </div>
         <div className='avaliacao'>
           <h2>Avalie o restaurante também!</h2>
-          <Avaliacao/>
+          <Avaliacao />
           <button>Enviar avaliação</button>
         </div>
         <div className='comentarios'>

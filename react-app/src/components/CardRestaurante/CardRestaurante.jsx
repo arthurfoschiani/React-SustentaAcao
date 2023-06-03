@@ -1,14 +1,16 @@
 import './CardRestaurante.css';
 
-export default function CardRestaurante() {
+export default function CardRestaurante(props) {
+    const { restaurante, praticas } = props
+
     return (
         <>
             <div className="cada-restaurante">
-                <p>Vegan Food</p>
+                <p>{restaurante}</p>
                 <div>
-                    <div>Economia de Água</div>
-                    <div>Produção Local</div>
-                    <div>Uso de Embalagens Sustentáveis</div>
+                    {praticas.map(pratica => (
+                        <div>{pratica.nome}</div>
+                    ))}
                 </div>
             </div>
         </>

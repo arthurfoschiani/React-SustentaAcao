@@ -1,14 +1,109 @@
-import './Home.css';
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
 
-import { Link } from 'react-router-dom'
+import './Home.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 import Menu from '../../components/Menu/Menu';
 import Footer from '../../components/Footer/Footer';
 import CardRestaurante from '../../components/CardRestaurante/CardRestaurante';
+import Loader from '../../components/Loader/Loader';
 
 export default function Home() {
+    const [restaurantes, setRestaurantes] = useState(null);
+    const [categorias, setCategorias] = useState(true);
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        loadCategorias();
+        loadRestaurantes();
+    }, []);
+
+    function loadRestaurantes() {
+        const cachedRestaurantes = sessionStorage.getItem('restaurantes');
+
+        if (cachedRestaurantes) {
+            setRestaurantes(JSON.parse(cachedRestaurantes));
+            setIsLoading(false);
+        } else {
+            axios.get('http://localhost:8080/GlobalSolution/rest/restaurantepraticasustentavel/')
+                .then(response => {
+                    setRestaurantes(response.data);
+                    sessionStorage.setItem('restaurantes', JSON.stringify(response.data));
+                    setIsLoading(false);
+                    console.log(response.data)
+                    if (response.data.length === 0) {
+                        toast.info('Nenhum restaurante encontrado.');
+                    }
+                })
+                .catch(error => {
+                    console.error(error);
+                    setIsLoading(false);
+                    toast.error('Ocorreu ao carregar os restaurantes.');
+                });
+        }
+    }
+
+    function loadCategorias() {
+        const cachedCategories = sessionStorage.getItem('categoriasArtigos');
+    
+        if (cachedCategories) {
+          setCategorias(JSON.parse(cachedCategories))
+        } else {
+          axios.get('http://localhost:8080/GlobalSolution/rest/categoria/')
+            .then(response => {
+              setCategorias(response.data);
+              sessionStorage.setItem('categoriasArtigos', JSON.stringify(response.data));
+              if (response.data.length === 0) {
+                toast.info('Nenhuma categoria encontrada.');
+              }
+            })
+            .catch(error => {
+              console.error(error);
+              toast.error('Ocorreu ao carregar as categorias.');
+            });
+        }
+      }
+
+    const renderList = () => {
+        if (!restaurantes) {
+            return <p className='rest-nao-encontrado'>Restaurantes não encontrado.</p>;
+        }
+
+        const uniqueRestaurantes = restaurantes.reduce((acc, item) => {
+            if (!acc.find(restaurante => restaurante.restaurante.cnpj === item.restaurante.cnpj)) {
+                acc.push(item);
+            }
+            return acc;
+        }, []);
+
+        const slicedData = uniqueRestaurantes.slice(0, 3);
+
+        return (
+            <>
+                {slicedData.map(item => (
+                    <Link to='/restaurante-individual' key={item.restaurante.cnpj}>
+                        <CardRestaurante restaurante={item.restaurante.nome} praticas={getPraticasSustentaveisByRestaurante(item.restaurante.cnpj)}></CardRestaurante>
+                    </Link>
+                ))}
+            </>
+        );
+    };
+
+    const getPraticasSustentaveisByRestaurante = (cnpjRestaurante) => {
+        const praticas = restaurantes.filter(item => item.restaurante.cnpj === cnpjRestaurante);
+        return praticas.map(item => item.praticaSustentavel);
+    };
+
+    function handleCategoriaClick(categoria) {
+        return categoria ? `/blog?categoria=${categoria}` : '/blog';
+    }
+
     return (
         <>
+            <ToastContainer />
             <Menu></Menu>
             <section className="section-banner">
                 <div className="banner">
@@ -51,17 +146,14 @@ export default function Home() {
             <section className="restaurantes-home">
                 <h1>Conheça restaurantes sustentáveis</h1>
                 <p>Nós fornecemos uma seção especial na qual é dedicada a listar restaurantes te dizemos se eles contribuem com práticas sustentáveis.</p>
-                <div className="lista-restaurantes">
-                    <Link to='restaurante-individual'>
-                        <CardRestaurante></CardRestaurante>
-                    </Link>
-                    <Link to='restaurante-individual'>
-                        <CardRestaurante></CardRestaurante>
-                    </Link>
-                    <Link to='restaurante-individual'>
-                        <CardRestaurante></CardRestaurante>
-                    </Link>
-                </div>
+
+                {isLoading ? (
+                    <Loader></Loader>
+                ) : (
+                    <div className="lista-restaurantes">
+                        {renderList()}
+                    </div>
+                )}
                 <Link to='/restaurantes'>Veja mais restaurantes <img src="https://img.icons8.com/ios-glyphs/90/45c4b0/arrow-pointing-left--v2.png" alt="arrow-pointing-left--v2" /></Link>
             </section >
 
@@ -71,42 +163,18 @@ export default function Home() {
                     <div className="campoartigo">
                         <h3>Venha conhecer o nosso <strong>Blog</strong></h3>
                         <p className="descricaoartigo">Nele você encontrará artigos sobre diversos assuntos</p>
-                        <Link to='/blog' className="checkartigo">
-                            <p>Tecnologias inovadoras</p>
-                            <img src="https://img.icons8.com/ios-glyphs/90/ffffff/chevron-right.png" alt="chevron-right" />
-                        </Link>
-                        <Link to='/blog' className="checkartigo">
-                            <p>Combate à fome mundial</p>
-                            <img src="https://img.icons8.com/ios-glyphs/90/ffffff/chevron-right.png" alt="chevron-right" />
-                        </Link>
-                        <Link to='/blog' className="checkartigo">
-                            <p>Escassez de alimentos</p>
-                            <img src="https://img.icons8.com/ios-glyphs/90/ffffff/chevron-right.png" alt="chevron-right" />
-                        </Link>
-                        <Link to='/blog' className="checkartigo">
-                            <p>IA generativa</p>
-                            <img src="https://img.icons8.com/ios-glyphs/90/ffffff/chevron-right.png" alt="chevron-right" />
-                        </Link>
-                        <Link to='/blog' className="checkartigo">
-                            <p>Agricultura vertical</p>
-                            <img src="https://img.icons8.com/ios-glyphs/90/ffffff/chevron-right.png" alt="chevron-right" />
-                        </Link>
-                        <Link to='/blog' className="checkartigo">
-                            <p>Aquaponia</p>
-                            <img src="https://img.icons8.com/ios-glyphs/90/ffffff/chevron-right.png" alt="chevron-right" />
-                        </Link>
-                        <Link to='/blog' className="checkartigo">
-                            <p>Hidroponia</p>
-                            <img src="https://img.icons8.com/ios-glyphs/90/ffffff/chevron-right.png" alt="chevron-right" />
-                        </Link>
-                        <Link to='/blog' className="checkartigo">
-                            <p>Distribuição de alimentos</p>
-                            <img src="https://img.icons8.com/ios-glyphs/90/ffffff/chevron-right.png" alt="chevron-right" />
-                        </Link>
-                        <Link to='/blog' className="checkartigo">
-                            <p>Melhorias na distribuição de alimentos</p>
-                            <img src="https://img.icons8.com/ios-glyphs/90/ffffff/chevron-right.png" alt="chevron-right" />
-                        </Link>
+                        <div className='categorias-article'>
+                            {categorias && categorias.length > 1 ? (
+                                categorias.map(item => (
+                                    <Link key={item.id} to={handleCategoriaClick(item.descricao)} className="checkartigo">
+                                        <p>{item.descricao}</p>
+                                        <img src="https://img.icons8.com/ios-glyphs/90/ffffff/chevron-right.png" alt="chevron-right" />
+                                    </Link>
+                                ))
+                            ) : (
+                                <p>Nenhuma categoria encontrada.</p>
+                            )}
+                        </div>
                         <Link to='/blog' className='btn-todos-artigos'>Veja todos os artigos <img src="https://img.icons8.com/ios-glyphs/90/ffffff/arrow-pointing-left--v2.png" alt="arrow-pointing-left--v2" /></Link>
                     </div>
                 </div>

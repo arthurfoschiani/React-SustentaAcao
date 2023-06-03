@@ -40,6 +40,11 @@
     outline: none;
 }
 
+.Restaurantes>.lista-restaurantes>p {
+    margin-top: 10vh;
+    padding-bottom: 10vh;
+}
+
 .filtro {
     width: 80%;
     margin: 0 auto 5vh;
@@ -56,6 +61,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.filtro>div>p {
+    width: 100%;
+    color: #45c4b1ce;
+    text-align: center;
 }
 
 .filtro>div>button {

@@ -1,0 +1,53 @@
+.loader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+.pulse-loader {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #45c4b0;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: #45c4b0;
+        transform: scale(1);
+    }
+
+    50% {
+        background-color: #9aeba3;
+        transform: scale(1.5);
+    }
+
+    100% {
+        background-color: #45c4b0;
+        transform: scale(1);
+    }
+}
+
+.loader>span {
+    margin-top: 4vh;
+    font-size: 1.5em;
+    font-weight: 500;
+    animation: color 2s infinite;
+}
+
+@keyframes color {
+    0% {
+        color: #45c4b0;
+    }
+
+    50% {
+        color: #9aeba3;
+    }
+
+    100% {
+        color: #45c4b0;
+    }
+}
