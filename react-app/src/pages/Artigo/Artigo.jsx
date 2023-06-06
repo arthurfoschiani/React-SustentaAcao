@@ -21,6 +21,10 @@ export default function Artigo() {
   const location = useLocation();
   const dadosArtigo = location.state.dadosArtigo;
 
+  const styleImg = {
+    backgroundImage: `url(${dadosArtigo.imgUrl})`
+  }
+
   const handleCurtidas = () => {
     axios.get('http://localhost:8080/GlobalSolution/rest/curtida/' + dadosArtigo.id)
       .then(response => {
@@ -133,7 +137,7 @@ export default function Artigo() {
     <>
       <Menu isWhite></Menu>
       <section className='artigo'>
-        <div className='img-fundo' />
+        <div className='img-fundo' style={styleImg} />
         <div className='article'>
           <div className='content-article'>
             <h2>{dadosArtigo.titulo}</h2>

@@ -5,7 +5,7 @@ export default function CardArtigo(props) {
     return (
         <>
             <div className='artigo-individual-blog'>
-                <img src="https://fastcompanybrasil.com/wp-content/uploads/2022/11/IA_generativa.jpg" alt="" />
+                <img src={props.artigo.imgUrl} alt="" />
                 <div>
                     <span>{props.artigo.categoria.descricao}</span>
                     <h2>{props.artigo.titulo}</h2>

@@ -59,16 +59,16 @@ INSERT INTO Restaurante VALUES (90123456789012, 'Restaurante I', 'Restaurante co
 INSERT INTO Restaurante VALUES (01234567890123, 'Restaurante J', 'Restaurante com pratos turcos tradicionais.', 'http://dominio.com', 10);
 
 -- Populando a tabela Unidade
-INSERT INTO Unidade VALUES (1, 'imagem1.jpg', '12345678', 'Rua das Flores, 123', 'São Paulo', 'SP', 'Jardim Paulista', 12345678901234);
-INSERT INTO Unidade VALUES (2, 'imagem2.jpg', '23456789', 'Avenida das Palmeiras, 456', 'Rio de Janeiro', 'RJ', 'Copacabana', 23456789012345);
-INSERT INTO Unidade VALUES (3, 'imagem3.jpg', '34567890', 'Rua dos Girassóis, 789', 'Belo Horizonte', 'MG', 'Savassi', 34567890123456);
-INSERT INTO Unidade VALUES (4, 'imagem4.jpg', '45678901', 'Rua das Acácias, 012', 'Curitiba', 'PR', 'Batel', 45678901234567);
-INSERT INTO Unidade VALUES (5, 'imagem5.jpg', '56789012', 'Avenida das Rosas, 345', 'Porto Alegre', 'RS', 'Moinhos de Vento', 56789012345678);
-INSERT INTO Unidade VALUES (6, 'imagem6.jpg', '67890123', 'Rua dos Lírios, 678', 'Salvador', 'BA', 'Barra', 67890123456789);
-INSERT INTO Unidade VALUES (7, 'imagem7.jpg', '78901234', 'Avenida dos Cravos, 901', 'Fortaleza', 'CE', 'Meireles', 78901234567890);
-INSERT INTO Unidade VALUES (8, 'imagem8.jpg', '89012345', 'Rua das Orquídeas, 234', 'Recife', 'PE', 'Boa Viagem', 89012345678901);
-INSERT INTO Unidade VALUES (9, 'imagem9.jpg', '90123456', 'Avenida das Violetas, 567', 'Manaus', 'AM', 'Adrianópolis', 90123456789012);
-INSERT INTO Unidade VALUES (10, 'imagem10.jpg', '01234567', 'Rua dos Jasmins, 890', 'Florianópolis', 'SC', 'Centro', 01234567890123);
+INSERT INTO Unidade VALUES (1, 'https://blog.arboimoveis.com.br/wp-content/uploads/2020/09/melhores-restaurantes-de-sp.jpg', '12345678', 'Rua das Flores, 123', 'São Paulo', 'SP', 'Jardim Paulista', 12345678901234);
+INSERT INTO Unidade VALUES (2, 'https://www.viajali.com.br/wp-content/uploads/2022/10/restaurantes-tematicos-em-sp-00.png', '23456789', 'Avenida das Palmeiras, 456', 'Rio de Janeiro', 'RJ', 'Copacabana', 23456789012345);
+INSERT INTO Unidade VALUES (3, 'https://capitalist.com.br/wp-content/uploads/2020/02/restaurante-1.jpg', '34567890', 'Rua dos Girassóis, 789', 'Belo Horizonte', 'MG', 'Savassi', 34567890123456);
+INSERT INTO Unidade VALUES (4, 'https://parqueterramagicaflorybal.com.br/imagens/atracao/foto-26-restaurante250647.jpg', '45678901', 'Rua das Acácias, 012', 'Curitiba', 'PR', 'Batel', 45678901234567);
+INSERT INTO Unidade VALUES (5, 'https://cdn.folhape.com.br/img/pc/1100/1/dn_arquivo/2021/01/edw-8028.jpg', '56789012', 'Avenida das Rosas, 345', 'Porto Alegre', 'RS', 'Moinhos de Vento', 56789012345678);
+INSERT INTO Unidade VALUES (6, 'https://blog.consumer.com.br/wp-content/uploads/2020/11/culin%C3%A1ria-regional-brasileira.jpg', '67890123', 'Rua dos Lírios, 678', 'Salvador', 'BA', 'Barra', 67890123456789);
+INSERT INTO Unidade VALUES (7, 'https://passeiosemphiphi.com/wp-content/uploads/2021/08/Wattana-Thai-Cuisine-Revista-deguste.jpg', '78901234', 'Avenida dos Cravos, 901', 'Fortaleza', 'CE', 'Meireles', 78901234567890);
+INSERT INTO Unidade VALUES (8, 'https://gresgastronomia.com.br/wp-content/uploads/2022/11/DSC_3271.jpg', '89012345', 'Rua das Orquídeas, 234', 'Recife', 'PE', 'Boa Viagem', 89012345678901);
+INSERT INTO Unidade VALUES (9, 'https://xvcuritiba.com.br/wp-content/uploads/2022/12/jardim-m.jpg.webp', '90123456', 'Avenida das Violetas, 567', 'Manaus', 'AM', 'Adrianópolis', 90123456789012);
+INSERT INTO Unidade VALUES (10, 'https://www.lopes.com.br/blog/wp-content/uploads/2014/12/121027_PSL_176.jpg', '01234567', 'Rua dos Jasmins, 890', 'Florianópolis', 'SC', 'Centro', 01234567890123);
 
 -- Populando a tabela Avaliacao
 INSERT INTO Avaliacao VALUES (1, 5, '01/05/2023', 12345678901234, 1);
@@ -107,7 +107,7 @@ O blockchain está oferecendo um novo nível de segurança e transparência para tra
 
 No entanto, enquanto nos maravilhamos com essas realizações, também devemos estar cientes dos desafios éticos, legais e sociais que acompanham essa revolução tecnológica. Questões de privacidade, equidade, e regulamentação são cada vez mais importantes à medida que avançamos para um futuro mais digital.
 
-Este artigo busca discutir as tendências atuais em tecnologias inovadoras, explorando suas aplicações, benefícios, desafios e possíveis direções futuras. Conforme nos preparamos para um futuro incerto, é crucial que adotemos uma abordagem ponderada e inclusiva para a inovação tecnológica. A tecnologia tem o potencial de transformar nosso mundo para melhor, mas somente se for usada com responsabilidade e consideração por seu impacto em todas as pessoas.', 'img_innovative_tech.jpg', '28/05/23', 1);
+Este artigo busca discutir as tendências atuais em tecnologias inovadoras, explorando suas aplicações, benefícios, desafios e possíveis direções futuras. Conforme nos preparamos para um futuro incerto, é crucial que adotemos uma abordagem ponderada e inclusiva para a inovação tecnológica. A tecnologia tem o potencial de transformar nosso mundo para melhor, mas somente se for usada com responsabilidade e consideração por seu impacto em todas as pessoas.', 'https://mittechreview.com.br/wp-content/uploads/2023/01/trbr_artigo_banner1_06012023.jpg', '28/05/23', 1);
 
 
 INSERT INTO Artigo VALUES (2, 'A importância da Agricultura Sustentável', 'A agricultura sustentável é uma abordagem de produção de alimentos que tem como objetivo ser ambientalmente saudável, economicamente rentável e socialmente responsável. Trata-se de um método de produção que conserva a água, reduz o uso de fertilizantes e pesticidas, e promove a biodiversidade nos campos.
@@ -126,7 +126,7 @@ O manejo integrado de nutrientes procura otimizar o uso de recursos e minimizar 
 
 A agricultura sustentável não é apenas sobre práticas de cultivo, no entanto. Ela também inclui aspectos sociais e econômicos, como garantir condições de trabalho justas para os trabalhadores agrícolas, apoiar comunidades rurais, e promover a viabilidade econômica das fazendas.
 
-A transição para uma agricultura mais sustentável é uma tarefa complexa que requer o envolvimento de muitos atores diferentes, incluindo agricultores, consumidores, pesquisadores, e políticos. No entanto, a longo prazo, a agricultura sustentável tem o potencial de proporcionar benefícios significativos, desde a proteção do meio ambiente até a promoção da segurança alimentar e a melhoria da qualidade de vida das comunidades rurais.', 'img_sustainable_agriculture.jpg', '28/05/23', 2);
+A transição para uma agricultura mais sustentável é uma tarefa complexa que requer o envolvimento de muitos atores diferentes, incluindo agricultores, consumidores, pesquisadores, e políticos. No entanto, a longo prazo, a agricultura sustentável tem o potencial de proporcionar benefícios significativos, desde a proteção do meio ambiente até a promoção da segurança alimentar e a melhoria da qualidade de vida das comunidades rurais.', 'https://www.superbac.com.br/wp-content/uploads/2020/05/agricultura-sustentavel-scaled.jpeg', '28/05/23', 2);
 
 
 INSERT INTO Artigo VALUES (3, 'Estratégias Eficientes para o Combate à Fome Mundial', 'O combate à fome mundial é uma das questões mais urgentes da nossa era. Apesar do progresso significativo nas últimas décadas, ainda há milhões de pessoas em todo o mundo que sofrem de desnutrição e insegurança alimentar. 
@@ -141,7 +141,7 @@ A promoção da igualdade de gênero na agricultura é outra medida fundamental. As 
 
 Por último, mas não menos importante, é essencial promover a paz e a estabilidade política, pois os conflitos e a instabilidade podem levar a crises de fome. Isso envolve a mediação de disputas, a promoção da democracia e dos direitos humanos, e a prevenção de conflitos através da diplomacia e da construção da paz.
 
-O combate à fome é uma tarefa complexa que requer a colaboração de todos os segmentos da sociedade, desde governos e organizações internacionais até empresas e indivíduos. Cada um de nós pode contribuir para esta causa de várias maneiras, seja através da doação para organizações de ajuda alimentar, da defesa de políticas justas, ou simplesmente da conscientização sobre a questão.', 'img_world_hunger.jpg', '28/05/23', 3);
+O combate à fome é uma tarefa complexa que requer a colaboração de todos os segmentos da sociedade, desde governos e organizações internacionais até empresas e indivíduos. Cada um de nós pode contribuir para esta causa de várias maneiras, seja através da doação para organizações de ajuda alimentar, da defesa de políticas justas, ou simplesmente da conscientização sobre a questão.', 'https://osaopaulo.org.br/wp-content/uploads/2023/02/18-campanha-fraternidade-fome06-1024x684.jpg', '28/05/23', 3);
 
 
 INSERT INTO Artigo VALUES (4, 'Desafiando a Escassez de Alimentos no Mundo Moderno', 'A escassez de alimentos é uma crise crescente que ameaça muitas comunidades ao redor do mundo. Devido a fatores como crescimento populacional, mudanças climáticas, instabilidade política e desigualdade econômica, muitas pessoas enfrentam dificuldades para acessar alimentos nutritivos e acessíveis.
@@ -158,7 +158,7 @@ A pesquisa e a inovação tecnológica também desempenham um papel crucial na luta 
 
 Além disso, é crucial garantir que a ajuda alimentar chegue àqueles que mais precisam dela. Isso envolve o trabalho de organizações humanitárias e governos para distribuir alimentos em áreas de crise, bem como políticas que promovam a igualdade econômica e o acesso a alimentos nutritivos.
 
-Em conclusão, a escassez de alimentos é um desafio complexo que exige uma abordagem multifacetada. Ao enfrentar as causas subjacentes e trabalhar para aumentar o acesso a alimentos nutritivos, podemos ajudar a aliviar a fome e a promover a segurança alimentar em todo o mundo.', 'img_food_scarcity.jpg', '28/05/23', 4);
+Em conclusão, a escassez de alimentos é um desafio complexo que exige uma abordagem multifacetada. Ao enfrentar as causas subjacentes e trabalhar para aumentar o acesso a alimentos nutritivos, podemos ajudar a aliviar a fome e a promover a segurança alimentar em todo o mundo.', 'https://www.nexojornal.com.br/incoming/imagens/bandejas.jpg/alternates/LANDSCAPE_768/bandejas.jpg', '28/05/23', 4);
 
 
 INSERT INTO Artigo VALUES (5, 'Explorando as Possibilidades da IA Generativa', 'A Inteligência Artificial (IA) tem se mostrado uma ferramenta incrivelmente poderosa em uma infinidade de aplicações, desde o reconhecimento de fala até a análise de dados. No entanto, uma das áreas mais promissoras e emocionantes da IA é a geração de conteúdo, ou IA generativa.
@@ -173,7 +173,7 @@ No entanto, a IA generativa também levanta questões importantes sobre autoria e 
 
 Também há desafios técnicos a serem superados. A IA generativa ainda está em sua infância e muitas de suas criações são imperfeitas. Além disso, os algoritmos de IA generativa podem ser extremamente intensivos em termos de computação e requerer grandes quantidades de dados para treinamento.
 
-Apesar desses desafios, a IA generativa tem um enorme potencial. À medida que a tecnologia avança, é provável que vejamos cada vez mais aplicações impressionantes dessa nova e emocionante área da IA.', 'img_generative_ai.jpg', '28/05/23', 5);
+Apesar desses desafios, a IA generativa tem um enorme potencial. À medida que a tecnologia avança, é provável que vejamos cada vez mais aplicações impressionantes dessa nova e emocionante área da IA.', 'https://hermes.dio.me/articles/cover/d57598a8-b96b-463d-92ed-b00746995b0e.jpg', '28/05/23', 5);
 
 
 INSERT INTO Artigo VALUES (6, 'A Ascensão da Agricultura Vertical: Perspectivas Futuras', 'A agricultura vertical é uma prática inovadora que tem o potencial de transformar o modo como produzimos alimentos. Trata-se do cultivo de plantas em ambientes internos, em múltiplas camadas ou andares, em vez de em um único nível, como em um campo ou estufa tradicional.
@@ -186,7 +186,7 @@ Além disso, a agricultura vertical é altamente eficiente em termos de recursos. 
 
 No entanto, a agricultura vertical também enfrenta desafios. Por exemplo, o custo inicial de instalação de uma fazenda vertical pode ser alto, e a energia necessária para iluminação e controle de temperatura pode ser significativa. Além disso, ainda há questões a serem resolvidas sobre a melhor maneira de cultivar certos tipos de plantas em um ambiente vertical.
 
-Apesar desses desafios, a agricultura vertical tem um grande potencial para o futuro. À medida que a população mundial continua a crescer e o espaço para a agricultura tradicional se torna cada vez mais escasso, a capacidade de produzir alimentos de maneira eficiente e sustentável em ambientes urbanos se tornará cada vez mais importante. A agricultura vertical, com suas muitas vantagens, está bem posicionada para desempenhar um papel importante nesse futuro.', 'img_vertical_farming.jpg', '28/05/23', 6);
+Apesar desses desafios, a agricultura vertical tem um grande potencial para o futuro. À medida que a população mundial continua a crescer e o espaço para a agricultura tradicional se torna cada vez mais escasso, a capacidade de produzir alimentos de maneira eficiente e sustentável em ambientes urbanos se tornará cada vez mais importante. A agricultura vertical, com suas muitas vantagens, está bem posicionada para desempenhar um papel importante nesse futuro.', 'https://digitalagro.com.br/wp-content/uploads/2021/12/vertical-agriculture.jpg', '28/05/23', 6);
 
 
 INSERT INTO Artigo VALUES (7, 'Aquaponia: Uma Revolução na Agricultura Sustentável', 'A aquaponia é uma forma revolucionária de agricultura que combina a criação de peixes (aquicultura) com o cultivo de plantas em água (hidroponia) em um sistema integrado. Este método inovador de produção de alimentos tem o potencial de tornar a agricultura mais sustentável e eficiente.
@@ -199,10 +199,10 @@ A aquaponia também é altamente produtiva. Devido à sua natureza simbiótica, é po
 
 Apesar desses benefícios, a aquaponia também apresenta desafios. A configuração de um sistema aquapônico pode ser complexa e requer um monitoramento cuidadoso para garantir o equilíbrio entre peixes e plantas. Além disso, a energia necessária para manter o sistema em funcionamento pode ser significativa.
 
-No entanto, o potencial da aquaponia para transformar a agricultura é imenso. À medida que enfrentamos os desafios da mudança climática e do crescimento populacional, a aquaponia oferece uma forma de produzir alimentos de maneira sustentável e eficiente. Com pesquisa e desenvolvimento contínuos, a aquaponia pode desempenhar um papel importante na alimentação do mundo no futuro.', 'img_aquaponics.jpg', '28/05/23', 7);
+No entanto, o potencial da aquaponia para transformar a agricultura é imenso. À medida que enfrentamos os desafios da mudança climática e do crescimento populacional, a aquaponia oferece uma forma de produzir alimentos de maneira sustentável e eficiente. Com pesquisa e desenvolvimento contínuos, a aquaponia pode desempenhar um papel importante na alimentação do mundo no futuro.', 'https://diarural.com.br/wp-content/uploads/2022/09/psicultura.jpg', '28/05/23', 7);
 
 
-INSERT INTO Artigo VALUES (8, 'Hidroponia: O Futuro da Agricultura Urbana', 'A hidroponia é uma forma inovadora de agricultura que envolve o cultivo de plantas sem solo. Em vez disso, as plantas são cultivadas em uma solução de água rica em nutrientes, permitindo-lhes absorver diretamente os nutrientes necessários para o crescimento. Esta abordagem tem várias vantagens e tem potencial para transformar a agricultura urbana.
+INSERT INTO Artigo VALUES (8, 'O Futuro da Agricultura Urbana', 'A hidroponia é uma forma inovadora de agricultura que envolve o cultivo de plantas sem solo. Em vez disso, as plantas são cultivadas em uma solução de água rica em nutrientes, permitindo-lhes absorver diretamente os nutrientes necessários para o crescimento. Esta abordagem tem várias vantagens e tem potencial para transformar a agricultura urbana.
 
 A primeira vantagem da hidroponia é a eficiência do espaço. Como as plantas não precisam de espaço para crescer as raízes no solo, elas podem ser cultivadas muito mais densamente do que na agricultura tradicional. Isso torna a hidroponia uma opção ideal para áreas urbanas, onde o espaço é limitado.
 
@@ -212,7 +212,7 @@ A hidroponia também permite um controle preciso sobre as condições de cresciment
 
 No entanto, a hidroponia também tem desafios. A configuração e a manutenção de um sistema hidropônico podem ser complexas e requerem conhecimento técnico. Além disso, a energia necessária para manter o sistema de iluminação e a bomba de água pode ser significativa.
 
-Apesar desses desafios, a hidroponia tem um grande potencial para o futuro. À medida que a população urbana continua a crescer e o espaço para a agricultura tradicional se torna cada vez mais escasso, a capacidade de produzir alimentos de maneira eficiente em ambientes urbanos será cada vez mais importante. A hidroponia, com suas muitas vantagens, está bem posicionada para desempenhar um papel importante nesse futuro.', 'img_hydroponics.jpg', '23/05/23', 8);
+Apesar desses desafios, a hidroponia tem um grande potencial para o futuro. À medida que a população urbana continua a crescer e o espaço para a agricultura tradicional se torna cada vez mais escasso, a capacidade de produzir alimentos de maneira eficiente em ambientes urbanos será cada vez mais importante. A hidroponia, com suas muitas vantagens, está bem posicionada para desempenhar um papel importante nesse futuro.', 'https://cptstatic.s3.amazonaws.com/imagens/enviadas/materias/materia27280/hidroponia-cpt.jpg', '23/05/23', 8);
 
 
 INSERT INTO Artigo VALUES 
@@ -226,7 +226,7 @@ Para enfrentar esses desafios, são necessárias soluções inovadoras. Uma abordage
 
 Outra solução é a adoção de práticas que reduzam a perda e o desperdício de alimentos. Isso pode envolver o uso de embalagens apropriadas, o treinamento de manipuladores de alimentos e o incentivo aos consumidores a comprar alimentos de forma mais responsável.
 
-Finalmente, é importante que a distribuição de alimentos seja justa e equitativa. Isso significa garantir que todos, independentemente de onde vivem ou de sua renda, tenham acesso a alimentos nutritivos e acessíveis. Para isso, podem ser necessárias políticas que promovam a equidade na distribuição de alimentos.', 'img_food_distribution.jpg', '28/05/23', 9);
+Finalmente, é importante que a distribuição de alimentos seja justa e equitativa. Isso significa garantir que todos, independentemente de onde vivem ou de sua renda, tenham acesso a alimentos nutritivos e acessíveis. Para isso, podem ser necessárias políticas que promovam a equidade na distribuição de alimentos.', 'https://aun.webhostusp.sti.usp.br/wp-content/uploads/Foto-Ecoosfera-670x381.jpg', '28/05/23', 9);
 
 
 INSERT INTO Artigo VALUES (10, 'Inovações e Melhorias na Distribuição de Alimentos', 'A distribuição de alimentos é uma peça-chave na garantia da segurança alimentar global. No entanto, muitos desafios persistem, desde a perda de alimentos durante o transporte até a inacessibilidade dos alimentos em áreas remotas. Felizmente, uma série de inovações e melhorias estão sendo implementadas para superar esses obstáculos.
@@ -237,7 +237,7 @@ Outra inovação importante é o desenvolvimento de tecnologias de armazenamento e 
 
 Finalmente, estão sendo tomadas medidas para tornar a distribuição de alimentos mais equitativa. Isso inclui programas que visam a melhorar o acesso a alimentos em áreas rurais e remotas, bem como políticas que promovem a justiça na cadeia de suprimentos de alimentos.
 
-Apesar dessas melhorias, ainda há muito trabalho a ser feito para garantir que todos tenham acesso a alimentos seguros, nutritivos e acessíveis. À medida que avançamos, será crucial continuar a inovar e a melhorar a maneira como distribuímos alimentos em todo o mundo.', 'img_improving_food_distribution.jpg', '28/05/23', 10);
+Apesar dessas melhorias, ainda há muito trabalho a ser feito para garantir que todos tenham acesso a alimentos seguros, nutritivos e acessíveis. À medida que avançamos, será crucial continuar a inovar e a melhorar a maneira como distribuímos alimentos em todo o mundo.', 'https://verakis.com/wp-content/uploads/2021/11/inovacao-de-alimentos.jpg);', '28/05/23', 10);
 
 
 -- Populando a tabela Comentario_Artigo

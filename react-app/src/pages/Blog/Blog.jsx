@@ -66,11 +66,15 @@ export default function Blog() {
     } else {
       axios.get('http://localhost:8080/GlobalSolution/rest/artigo/')
         .then(response => {
-          setArtigos(response.data);
-          sessionStorage.setItem('artigos', JSON.stringify(response.data));
-          setIsLoading(false)
-          if (response.data.length === 0) {
-            toast.info('Nenhum artigo encontrado.');
+          if(response.status === 200) {
+            setArtigos(response.data);
+            sessionStorage.setItem('artigos', JSON.stringify(response.data));
+            setIsLoading(false)
+            if (response.data.length === 0) {
+              toast.info('Nenhum artigo encontrado.');
+            }
+          } else {
+            return loadArtigos();
           }
         })
         .catch(error => {
