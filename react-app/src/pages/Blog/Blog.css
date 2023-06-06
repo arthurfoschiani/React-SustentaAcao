@@ -74,7 +74,8 @@
 
 .artigos-blog>a {
     width: 30%;
-    margin: 5vh 0 0;
+    margin: 5vh 20px 0;
+    min-width: 280px;
 }
 
 .artigos-blog>p {
@@ -85,4 +86,29 @@
 
 .artigos-blog .loader {
     margin-top: 20vh;
+}
+
+@media (max-width: 1300px) {
+    .artigos-blog>a {
+        width: 40%;
+    }
+}
+
+@media (max-width: 900px) {
+    .blog>.search-area>h1 {
+        font-size: 2em;
+    }
+    
+    .blog>.search-area>p {
+        font-size: 1em;
+    }
+    .categoria-artigos {
+        width: 30%;
+    }
+    .artigos-blog {
+        width: 65%;
+    }
+    .artigos-blog>a {
+        width: 60%;
+    }
 }

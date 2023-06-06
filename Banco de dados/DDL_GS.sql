@@ -26,6 +26,7 @@ CREATE TABLE Restaurante (
     CNPJ NUMBER(14) CONSTRAINT PK_Restaurante PRIMARY KEY,
     Nome VARCHAR(50) NOT NULL,
     Descricao VARCHAR(1000) NOT NULL,
+    Site VARCHAR(50),
     Fk_Id_Culinaria NUMBER(2) CONSTRAINT FK_Restaurante_Culinaria REFERENCES Culinaria
 );
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 
@@ -69,7 +69,6 @@ export default function Restaurantes() {
           setRestaurantes(response.data);
           sessionStorage.setItem('restaurantes', JSON.stringify(response.data));
           setIsLoading(false);
-          console.log(response.data)
           if (response.data.length === 0) {
             toast.info('Nenhum restaurante encontrado.');
           }
@@ -87,17 +86,23 @@ export default function Restaurantes() {
       setFilteredRestaurantes(restaurantes);
       return;
     }
-
+  
     const filtered = restaurantes.filter(
-      item => item.restaurante.culinaria.nome === culinaria
+      item => item.restaurante.culinaria?.nome === culinaria
     );
     setFilteredRestaurantes(filtered);
   }
 
   function handleCulinariaClick(culinaria) {
-    const newUrl = culinaria ? `/restaurantes?culinaria=${culinaria}` : '/restaurantes';
+    let newUrl = `/restaurantes`;
+    if (culinaria === selectedCulinaria) {
+      newUrl = `/restaurantes`;
+      setSelectedCulinaria(null)
+    } else {
+      newUrl = culinaria ? `/restaurantes?culinaria=${culinaria}` : '/restaurantes';
+      setSelectedCulinaria(culinaria);
+    }
     navigate(newUrl);
-    setSelectedCulinaria(culinaria);
   }
 
   function getPraticasSustentaveisByRestaurante(cnpjRestaurante) {
@@ -105,6 +110,10 @@ export default function Restaurantes() {
       item => item.restaurante.cnpj === cnpjRestaurante
     );
     return praticas.map(item => item.praticaSustentavel);
+  }
+
+  const direcionarRestaurante = (dadosRestaurante, praticasSustentaveis) => {
+    navigate('/restaurante-individual', { state: { dadosRestaurante, praticasSustentaveis } })
   }
 
   function renderList() {
@@ -123,9 +132,9 @@ export default function Restaurantes() {
       <>
         {uniqueRestaurantes && uniqueRestaurantes.length > 0 ? (
           uniqueRestaurantes.map(item => (
-            <Link to='/restaurante-individual' key={item.restaurante.cnpj}>
+            <a onClick={() => direcionarRestaurante(item.restaurante, getPraticasSustentaveisByRestaurante(item.restaurante.cnpj))} key={item.restaurante.cnpj}>
               <CardRestaurante restaurante={item.restaurante.nome} praticas={getPraticasSustentaveisByRestaurante(item.restaurante.cnpj)}></CardRestaurante>
-            </Link>
+            </a>
           ))
         ) : (
           <p className='rest-nao-encontrado'>Restaurantes não encontrado.</p>
@@ -137,16 +146,15 @@ export default function Restaurantes() {
   // JSX
   return (
     <>
-      <Menu />
+      <Menu IsLetterShadow />
       <section className='Restaurantes'>
         <div className='search-area'>
-          <h1>Busque por restaurantes que você deseja</h1>
-          <input type="text" />
+          <h1>Busque os restaurantes que deseja por culinárias</h1>
         </div>
         <div className='filtro'>
           <p>Filtrar por culinária</p>
           <div>
-            {culinarias && culinarias.length > 1 ? (
+            {culinarias && culinarias.length >= 1 ? (
               culinarias.map(item => (
                 <button key={item.id} onClick={() => handleCulinariaClick(item.nome)} className={item.nome === selectedCulinaria ? 'active' : ''}>
                   {item.nome}

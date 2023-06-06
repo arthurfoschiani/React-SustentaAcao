@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 
@@ -22,6 +22,33 @@ export default function Blog() {
   const navigate = useNavigate();
   const queryParams = new URLSearchParams(location.search);
   const categoria = queryParams.get('categoria');
+
+  const [scrollPosition, setScrollPosition] = useState(null);
+
+  useEffect(() => {
+    function handleScroll() {
+      const footer = document.getElementById('footer');
+      const rect = footer.getBoundingClientRect();
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const isScrolledToFooter = rect.top <= (window.innerHeight + scrollTop);
+
+      if (isScrolledToFooter && scrollPosition === null) {
+        setScrollPosition(scrollTop);
+      } else if (!isScrolledToFooter) {
+        setScrollPosition(null);
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [scrollPosition]);
+
+  const style = scrollPosition === null
+    ? { position: 'fixed' }
+    : { position: 'absolute', top: `${scrollPosition}px` };
 
   // Load cached data or fetch from server
   useEffect(() => {
@@ -90,29 +117,37 @@ export default function Blog() {
       return;
     }
 
-    console.log(categoria)
-
     const filtered = artigos.filter(
       item => item.categoria.descricao === categoria
     );
-    console.log(filtered)
     setFilteredArtigos(filtered);
   }
 
   function handleCategoriaClick(categoria) {
-    const newUrl = categoria ? `/blog?categoria=${categoria}` : '/blog';
+    let newUrl = `/blog`;
+    if (categoria === selectedCategoria) {
+      newUrl = `/blog`;
+      setSelectedCategoria(null)
+    } else {
+      newUrl = categoria ? `/blog?categoria=${categoria}` : '/blog';
+      setSelectedCategoria(categoria);
+    }
     navigate(newUrl);
+  }
+
+  const direcionarArtigo = (dadosArtigo) => {
+    navigate('/artigo', { state: { dadosArtigo } })
   }
 
   return (
     <>
-      <Menu></Menu>
+      <Menu IsLetterShadow></Menu>
       <section className='blog'>
         <div className='search-area'>
           <h1>Faça parte da mudança</h1>
           <p>Saiba como as IAs generativas estão construindo um futuro sem fome dentre outros assuntos...</p>
         </div>
-        <div className='categoria-artigos'>
+        <div style={style} className='categoria-artigos'>
           {categorias && categorias.length > 1 ? (
             categorias.map(item => (
               <a key={item.id} onClick={() => handleCategoriaClick(item.descricao)} className={item.descricao === selectedCategoria ? 'categoria-ativa' : ''}>{item.descricao}</a>
@@ -127,9 +162,9 @@ export default function Blog() {
           ) : (
             filteredArtigos && filteredArtigos.length > 0 ? (
               filteredArtigos.map(item => (
-                <Link to='/artigo'>
+                <a onClick={() => direcionarArtigo(item)} key={item.id}>
                   <CardArtigo artigo={item}></CardArtigo>
-                </Link>
+                </a>
               ))
             ) : (
               <p>Nenhum artigo encontrado.</p>

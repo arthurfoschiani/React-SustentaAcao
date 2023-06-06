@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import Estrela from '../Estrela/Estrela';
 
-export default function Avaliacao () {
-  const [rating, setRating] = useState(0);
+export default function Avaliacao ({ onAvaliacaoSelecionada, valorInicial }) {
+  const [rating, setRating] = useState(valorInicial);
 
   const handleStarSelect = (selectedRating) => {
     setRating(selectedRating);
+    onAvaliacaoSelecionada(selectedRating);
   };
 
   return (

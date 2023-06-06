@@ -47,16 +47,16 @@ INSERT INTO Usuario VALUES (9, 'Rafael', 'senha123', 'rafael@gmail.com', 'C');
 INSERT INTO Usuario VALUES (10, 'Gabriela', 'senha123', 'gabriela@gmail.com', 'C');
 
 -- Populando a tabela Restaurante
-INSERT INTO Restaurante VALUES (12345678901234, 'Restaurante A', 'Restaurante com comida italiana tradicional.', 1);
-INSERT INTO Restaurante VALUES (23456789012345, 'Restaurante B', 'Restaurante especializado em culinária chinesa.', 2);
-INSERT INTO Restaurante VALUES (34567890123456, 'Restaurante C', 'Restaurante com variedade de pratos mexicanos.', 3);
-INSERT INTO Restaurante VALUES (45678901234567, 'Restaurante D', 'Restaurante indiano com opções vegetarianas.', 4);
-INSERT INTO Restaurante VALUES (56789012345678, 'Restaurante E', 'Restaurante japonês com sushi e sashimi.', 5);
-INSERT INTO Restaurante VALUES (67890123456789, 'Restaurante F', 'Restaurante com pratos franceses refinados.', 6);
-INSERT INTO Restaurante VALUES (78901234567890, 'Restaurante G', 'Restaurante com buffet de comida brasileira.', 7);
-INSERT INTO Restaurante VALUES (89012345678901, 'Restaurante H', 'Restaurante com sabores tailandeses autênticos.', 8);
-INSERT INTO Restaurante VALUES (90123456789012, 'Restaurante I', 'Restaurante com especialidades gregas.', 9);
-INSERT INTO Restaurante VALUES (01234567890123, 'Restaurante J', 'Restaurante com pratos turcos tradicionais.', 10);
+INSERT INTO Restaurante VALUES (12345678901234, 'Restaurante A', 'Restaurante com comida italiana tradicional.', 'http://dominio.com', 1);
+INSERT INTO Restaurante VALUES (23456789012345, 'Restaurante B', 'Restaurante especializado em culinária chinesa.', 'http://dominio.com', 2);
+INSERT INTO Restaurante VALUES (34567890123456, 'Restaurante C', 'Restaurante com variedade de pratos mexicanos.', 'http://dominio.com', 3);
+INSERT INTO Restaurante VALUES (45678901234567, 'Restaurante D', 'Restaurante indiano com opções vegetarianas.', 'http://dominio.com', 4);
+INSERT INTO Restaurante VALUES (56789012345678, 'Restaurante E', 'Restaurante japonês com sushi e sashimi.', 'http://dominio.com', 5);
+INSERT INTO Restaurante VALUES (67890123456789, 'Restaurante F', 'Restaurante com pratos franceses refinados.', 'http://dominio.com', 6);
+INSERT INTO Restaurante VALUES (78901234567890, 'Restaurante G', 'Restaurante com buffet de comida brasileira.', 'http://dominio.com', 7);
+INSERT INTO Restaurante VALUES (89012345678901, 'Restaurante H', 'Restaurante com sabores tailandeses autênticos.', 'http://dominio.com', 8);
+INSERT INTO Restaurante VALUES (90123456789012, 'Restaurante I', 'Restaurante com especialidades gregas.', 'http://dominio.com', 9);
+INSERT INTO Restaurante VALUES (01234567890123, 'Restaurante J', 'Restaurante com pratos turcos tradicionais.', 'http://dominio.com', 10);
 
 -- Populando a tabela Unidade
 INSERT INTO Unidade VALUES (1, 'imagem1.jpg', '12345678', 'Rua das Flores, 123', 'São Paulo', 'SP', 'Jardim Paulista', 12345678901234);

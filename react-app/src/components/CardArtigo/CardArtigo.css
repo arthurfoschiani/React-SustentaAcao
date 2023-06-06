@@ -24,7 +24,7 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    height: 25vh;
+    min-height: 25vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

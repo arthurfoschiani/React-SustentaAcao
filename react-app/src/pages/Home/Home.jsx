@@ -16,6 +16,8 @@ export default function Home() {
     const [categorias, setCategorias] = useState(true);
     const [isLoading, setIsLoading] = useState(true);
 
+    const navigate = useNavigate();
+
     useEffect(() => {
         loadCategorias();
         loadRestaurantes();
@@ -30,12 +32,15 @@ export default function Home() {
         } else {
             axios.get('http://localhost:8080/GlobalSolution/rest/restaurantepraticasustentavel/')
                 .then(response => {
-                    setRestaurantes(response.data);
-                    sessionStorage.setItem('restaurantes', JSON.stringify(response.data));
-                    setIsLoading(false);
-                    console.log(response.data)
-                    if (response.data.length === 0) {
-                        toast.info('Nenhum restaurante encontrado.');
+                    if (response.status === 200) {
+                        setRestaurantes(response.data);
+                        sessionStorage.setItem('restaurantes', JSON.stringify(response.data));
+                        setIsLoading(false);
+                        if (response.data.length === 0) {
+                            toast.info('Nenhum restaurante encontrado.');
+                        }
+                    } else {
+                        return loadRestaurantes()
                     }
                 })
                 .catch(error => {
@@ -48,24 +53,28 @@ export default function Home() {
 
     function loadCategorias() {
         const cachedCategories = sessionStorage.getItem('categoriasArtigos');
-    
+
         if (cachedCategories) {
-          setCategorias(JSON.parse(cachedCategories))
+            setCategorias(JSON.parse(cachedCategories))
         } else {
-          axios.get('http://localhost:8080/GlobalSolution/rest/categoria/')
-            .then(response => {
-              setCategorias(response.data);
-              sessionStorage.setItem('categoriasArtigos', JSON.stringify(response.data));
-              if (response.data.length === 0) {
-                toast.info('Nenhuma categoria encontrada.');
-              }
-            })
-            .catch(error => {
-              console.error(error);
-              toast.error('Ocorreu ao carregar as categorias.');
-            });
+            axios.get('http://localhost:8080/GlobalSolution/rest/categoria/')
+                .then(response => {
+                    if (response.status === 200) {
+                        setCategorias(response.data);
+                        sessionStorage.setItem('categoriasArtigos', JSON.stringify(response.data));
+                        if (response.data.length === 0) {
+                            toast.info('Nenhuma categoria encontrada.');
+                        }
+                    } else {
+                        return loadRestaurantes()
+                    }
+                })
+                .catch(error => {
+                    console.error(error);
+                    toast.error('Ocorreu ao carregar as categorias.');
+                });
         }
-      }
+    }
 
     const renderList = () => {
         if (!restaurantes) {
@@ -84,13 +93,17 @@ export default function Home() {
         return (
             <>
                 {slicedData.map(item => (
-                    <Link to='/restaurante-individual' key={item.restaurante.cnpj}>
+                    <a onClick={() => direcionarRestaurante(item.restaurante, getPraticasSustentaveisByRestaurante(item.restaurante.cnpj))} key={item.restaurante.cnpj}>
                         <CardRestaurante restaurante={item.restaurante.nome} praticas={getPraticasSustentaveisByRestaurante(item.restaurante.cnpj)}></CardRestaurante>
-                    </Link>
+                    </a>
                 ))}
             </>
         );
     };
+
+    const direcionarRestaurante = (dadosRestaurante, praticasSustentaveis) => {
+        navigate('/restaurante-individual', { state: { dadosRestaurante, praticasSustentaveis } })
+    }
 
     const getPraticasSustentaveisByRestaurante = (cnpjRestaurante) => {
         const praticas = restaurantes.filter(item => item.restaurante.cnpj === cnpjRestaurante);

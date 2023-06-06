@@ -13,6 +13,7 @@
     height: 75vh;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .section-banner>.banner>div {
@@ -20,9 +21,9 @@
 }
 
 .section-banner>.banner>div>h2 {
-    font-size: 5em;
+    font-size: 4em;
     width: 100%;
-    padding: 20vh 0 0 10%;
+    padding: 0 0 0 10%;
 }
 
 .section-banner>.banner>div>button {
@@ -43,7 +44,8 @@
 }
 
 .section-banner>.banner>img {
-    width: 50%;
+    width: 45%;
+    height: fit-content;
 }
 
 .topics-banner {
@@ -52,12 +54,16 @@
     margin: auto;
     justify-content: space-between;
     align-items: center;
-    height: 25vh;
+    min-height: 25vh;
 }
 
 .topics-banner>.topic {
     display: flex;
     justify-content: space-between;
+    height: inherit;
+    padding-top: 5vh;
+    width: 33%;
+    min-width: 400px;
 }
 
 .topics-banner>.topic>.topic-image {
@@ -81,13 +87,13 @@
     font-size: 1.5em;
     font-weight: 600;
     padding-bottom: 2vh;
+    text-align: left;
 }
 
 .restaurantes-home {
     height: fit-content;
     width: 100%;
     box-sizing: border-box;
-    padding: 0 5%;
 }
 
 .restaurantes-home>h1 {
@@ -122,6 +128,7 @@
 .lista-restaurantes>a {
     width: 25%;
     margin: 20px 50px;
+    min-width: 400px;
 }
 
 .restaurantes-home>a {
@@ -150,7 +157,7 @@
 
 .artigos .blocoartigo {
     width: 100%;
-    height: 70vh;
+    height: 80vh;
     background-color: #45c4b0;
     margin-top: 10vh;
     display: flex;
@@ -382,4 +389,94 @@
 
 .parceiros>.marcas>img:hover {
     transform: scale(1.05);
+}
+
+@media (max-width: 1550px) {
+    .artigos .blocoartigo .imgFlatCategoria {
+        height: 75vh;
+        left: 7em;
+    }
+    .artigos .blocoartigo .campoartigo {
+        margin-left: 20em;
+    }
+    .parceiros>.marcas {
+        flex-direction: column;
+        align-items: center;
+    }
+    .parceiros>.marcas>img {
+        height: 7vh;
+        margin: 2vh 0;
+        width: fit-content;
+    }
+}
+
+@media (max-width: 1350px) {
+    .topics-banner {
+        flex-direction: column;
+    }
+    .topics-banner>.topic {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .section-banner>.banner>div>h2 {
+        font-size: 3em;
+    }
+    .section-banner>.banner>div>button {
+        margin: 2vh 0 0 10%;
+        padding: 12px 32px;
+        font-size: 1em;
+    }
+    .artigos .blocoartigo .imgFlatCategoria {
+        display: none;
+    }
+    .artigos .blocoartigo .campoartigo {
+        margin-left: 10%;
+        width: 80%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .introducao {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    .section-banner>.banner>div>h2 {
+        font-size: 2em;
+    }
+    .section-banner>.banner>div>button {
+        margin: 2vh 0 0 10%;
+        padding: 12px 32px;
+        font-size: 1em;
+    }
+    .sugestoes {
+        flex-direction: column;
+    }
+    .sugestoes>.sugestoes-textos {
+        width: 100%;
+        padding-right: 0;
+    }
+    .sugestoes>.sugestoes-inputs {
+        width: 100%;
+        margin-top: 4vh;
+    }
+    .sugestoes>.sugestoes-inputs>textarea {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 650px) {
+    .section-banner>.banner>div {
+        width: 80%;
+    }
+    .section-banner>.banner>img {
+        display: none;
+    }
+    .parceiros>.marcas>img {
+        height: 4vh;
+    }
 }

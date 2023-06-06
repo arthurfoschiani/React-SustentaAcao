@@ -1,15 +1,14 @@
 .sign-up {
     background: linear-gradient(45deg, #45c4b0 0%, #9aeba3 100%);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .sign-up>img {
-    margin-top: 10vh;
-    margin-left: 5%;
     transform: scale(-1, 1);
+    width: 30%;
 }
 
 .sign-up>div {
@@ -23,6 +22,7 @@
     justify-content: center;
     align-items: center;
     box-shadow: 0px 6px 20px -8px rgba(0, 0, 0, 0.62);
+    margin: 22vh 0;
 }
 
 .sign-up>div>h1 {
@@ -122,4 +122,22 @@
     bottom: 22px;
     left: 90%;
     color: #696F79;
+}
+
+@media (max-width: 1400px) {
+    .sign-up>img {
+        display: none;
+    }
+    .sign-up>div {
+        width: 70%;
+    }
+}
+
+@media (max-width: 800px) {
+    .sign-up>div {
+        width: 100%;
+        min-height: 100vh;
+        border-radius: 0;
+        margin: 0;
+    }
 }

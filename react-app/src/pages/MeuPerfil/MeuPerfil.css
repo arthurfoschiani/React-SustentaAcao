@@ -58,6 +58,13 @@
     width: 80%;
     font-weight: 100;
     margin-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+.editar-perfil>p {
+    color: #8692A6;
+    font-size: 0.8em;
+    font-weight: 500;
 }
 
 .editar-perfil>hr {
@@ -93,6 +100,14 @@
     box-shadow: 0 0 0 0.2rem #51d6c4;
 }
 
+.editar-perfil>a {
+    font-size: 1em;
+    color: red;
+    padding-bottom: 2vh;
+    font-weight: 600;
+    cursor: pointer;
+}
+
 .editar-perfil>button {
     box-sizing: border-box;
     padding: 12px;
@@ -112,4 +127,15 @@
 .editar-perfil>button:hover {
     background-color: #45c4b100;
     color: #45c4b0;
+}
+
+@media (max-width: 1350px) {
+    .meu-perfil>.img-meu-perfil {
+        display: none;
+    }
+    .editar-perfil {
+        width: 100%;
+        height: 100vh;
+        box-shadow: none;
+    }
 }
