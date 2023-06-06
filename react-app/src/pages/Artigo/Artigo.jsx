@@ -96,7 +96,7 @@ export default function Artigo() {
     }
   }
 
-  const handleEnviarComentario = () => {
+  const setComentario = () => {
     let userData = sessionStorage.getItem('user')
 
     if (!comentarioText) {
@@ -160,7 +160,7 @@ export default function Artigo() {
                   )}
                   <div className='escrever-comentario'>
                     <input value={comentarioText} onChange={e => setComentarioText(e.target.value)} placeholder='Escreva um comentário você também...' type="text" />
-                    <button onClick={handleEnviarComentario}>Publicar</button>
+                    <button onClick={setComentario}>Publicar</button>
                   </div>
                 </>
               )}

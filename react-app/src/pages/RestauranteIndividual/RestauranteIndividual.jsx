@@ -101,7 +101,7 @@ export default function RestauranteIndividual() {
     setPraticaSelecionada(item);
   };
 
-  const handleEnviarComentario = () => {
+  const setComentario = () => {
     let userData = sessionStorage.getItem('user');
 
     if (!comentarioText) {
@@ -248,7 +248,7 @@ export default function RestauranteIndividual() {
                       placeholder="Escreva um comentário você também..."
                       type="text"
                     />
-                    <button onClick={handleEnviarComentario}>Publicar</button>
+                    <button onClick={setComentario}>Publicar</button>
                   </div>
                 </>
               ) : (

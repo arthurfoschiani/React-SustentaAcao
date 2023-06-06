@@ -23,40 +23,11 @@ export default function Blog() {
   const queryParams = new URLSearchParams(location.search);
   const categoria = queryParams.get('categoria');
 
-  const [scrollPosition, setScrollPosition] = useState(null);
-
-  useEffect(() => {
-    function handleScroll() {
-      const footer = document.getElementById('footer');
-      const rect = footer.getBoundingClientRect();
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const isScrolledToFooter = rect.top <= (window.innerHeight + scrollTop);
-
-      if (isScrolledToFooter && scrollPosition === null) {
-        setScrollPosition(scrollTop);
-      } else if (!isScrolledToFooter) {
-        setScrollPosition(null);
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [scrollPosition]);
-
-  const style = scrollPosition === null
-    ? { position: 'fixed' }
-    : { position: 'absolute', top: `${scrollPosition}px` };
-
-  // Load cached data or fetch from server
   useEffect(() => {
     loadCategorias();
     loadArtigos();
   }, []);
 
-  // Filter artigos by categoria
   useEffect(() => {
     filterArtigos();
   }, [categoria, artigos]);
@@ -65,7 +36,6 @@ export default function Blog() {
     setSelectedCategoria(categoria);
   }, [categoria]);
 
-  // Functions
   function loadCategorias() {
     const cachedCategories = sessionStorage.getItem('categoriasArtigos');
 
@@ -147,7 +117,7 @@ export default function Blog() {
           <h1>Faça parte da mudança</h1>
           <p>Saiba como as IAs generativas estão construindo um futuro sem fome dentre outros assuntos...</p>
         </div>
-        <div style={style} className='categoria-artigos'>
+        <div className='categoria-artigos'>
           {categorias && categorias.length > 1 ? (
             categorias.map(item => (
               <a key={item.id} onClick={() => handleCategoriaClick(item.descricao)} className={item.descricao === selectedCategoria ? 'categoria-ativa' : ''}>{item.descricao}</a>
@@ -173,7 +143,6 @@ export default function Blog() {
         </div>
       </section>
       <ToastContainer></ToastContainer>
-      <Footer></Footer>
     </>
   );
 }

@@ -122,7 +122,7 @@ export default function Home() {
                 <div className="banner">
                     <div>
                         <h2>Descubra práticas sustentáveis e ajude a alimentar o mundo.</h2>
-                        <button>Conhecer mais</button>
+                        <a>Conhecer mais</a>
                     </div>
                     <img src="https://blush.design/api/download?shareUri=5erlmsVJI0brpVVe&c=Clothes_0%7Ee85d5d-0.1%7E323c84_Hair_0%7E50271b-0.1%7E50271b_Skin_0%7Ee88f70-0.1%7Ee88f70&w=800&h=800&fm=png" alt="Banner Imagem" />
                 </div>
@@ -133,7 +133,7 @@ export default function Home() {
                         </div>
                         <div className="topic-text">
                             <p className="topic-title">Restaurantes Sustentáveis</p>
-                            <p className="topic-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, porro asperiores. Facere aliquam hic excepturi accusamus quod molestias aliquid eius, ad asperiores. Error repudiandae modi enim ab iste labore tenetur!</p>
+                            <p className="topic-description">Restaurantes sustentáveis são negócios conscientes do impacto ambiental e social de suas operações. Eles adotam práticas para minimizar o desperdício, incentivam a economia local e respeitam a biodiversidade, reinventando a indústria alimentar para um consumo mais responsável.</p>
                         </div>
                     </div>
                     <div className="topic">
@@ -141,8 +141,8 @@ export default function Home() {
                             <img src="https://img.icons8.com/ios-filled/100/000000/hungry.png" alt="hungry" />
                         </div>
                         <div className="topic-text">
-                            <p className="topic-title">Redução de disperdício de comida</p>
-                            <p className="topic-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, porro asperiores. Facere aliquam hic excepturi accusamus quod molestias aliquid eius, ad asperiores. Error repudiandae modi enim ab iste labore tenetur!</p>
+                            <p className="topic-title">Redução de disperdício</p>
+                            <p className="topic-description">A redução de desperdício de comida é fundamental para a sustentabilidade do planeta. O desperdício alimentar contribui para a escassez de recursos e para as emissões de gases de efeito estufa. Práticas como planejamento de refeições e compostagem de resíduos ajudam a minimizar esse impacto.</p>
                         </div>
                     </div>
                     <div className="topic">
@@ -151,7 +151,7 @@ export default function Home() {
                         </div>
                         <div className="topic-text">
                             <p className="topic-title">Alcance da comunidade</p>
-                            <p className="topic-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, porro asperiores. Facere aliquam hic excepturi accusamus quod molestias aliquid eius, ad asperiores. Error repudiandae modi enim ab iste labore tenetur!</p>
+                            <p className="topic-description">O alcance da comunidade é essencial para negócios sustentáveis. Além de promover práticas ecológicas, é importante envolver a comunidade local, fortalecendo a economia local e criando uma cultura de sustentabilidade. Isso pode ser feito através de parcerias com produtores locais e programas de educação ambiental.</p>
                         </div>
                     </div>
                 </div>

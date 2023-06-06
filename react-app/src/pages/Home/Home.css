@@ -23,10 +23,10 @@
 .section-banner>.banner>div>h2 {
     font-size: 4em;
     width: 100%;
-    padding: 0 0 0 10%;
+    padding: 0 0 5vh 10%;
 }
 
-.section-banner>.banner>div>button {
+.section-banner>.banner>div>a {
     margin: 5vh 0 0 10%;
     background-color: #fff;
     padding: 16px 48px;
@@ -39,7 +39,7 @@
     transition: 0.2s;
 }
 
-.section-banner>.banner>div>button:hover {
+.section-banner>.banner>div>a:hover {
     background-color: #ffffff00;
 }
 

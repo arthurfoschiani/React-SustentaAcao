@@ -24,18 +24,15 @@ export default function Restaurantes() {
   const queryParams = new URLSearchParams(location.search);
   const culinaria = queryParams.get('culinaria');
 
-  // Load cached data or fetch from server
   useEffect(() => {
     loadCulinarias();
     loadRestaurantes();
   }, []);
 
-  // Filter restaurantes by culinaria
   useEffect(() => {
     filterRestaurantes();
   }, [culinaria, restaurantes]);
 
-  // Functions
   function loadCulinarias() {
     const cachedCulinarias = sessionStorage.getItem('culinarias');
 
@@ -44,10 +41,14 @@ export default function Restaurantes() {
     } else {
       axios.get('http://localhost:8080/GlobalSolution/rest/culinaria/')
         .then(response => {
-          setCulinarias(response.data);
-          sessionStorage.setItem('culinarias', JSON.stringify(response.data));
-          if (response.data.length === 0) {
-            toast.info('Nenhuma culinária encontrada.');
+          if (response.status === 200) {
+            setCulinarias(response.data);
+            sessionStorage.setItem('culinarias', JSON.stringify(response.data));
+            if (response.data.length === 0) {
+              toast.info('Nenhuma culinária encontrada.');
+            }
+          } else {
+            return loadCulinarias();
           }
         })
         .catch(error => {
@@ -86,7 +87,7 @@ export default function Restaurantes() {
       setFilteredRestaurantes(restaurantes);
       return;
     }
-  
+
     const filtered = restaurantes.filter(
       item => item.restaurante.culinaria?.nome === culinaria
     );
@@ -143,7 +144,6 @@ export default function Restaurantes() {
     );
   }
 
-  // JSX
   return (
     <>
       <Menu IsLetterShadow />
