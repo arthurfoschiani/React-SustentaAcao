@@ -42,17 +42,12 @@ export default function Artigo() {
 
   const handleComentarios = () => {
     setIsLoading(true);
-    axios.get('http://localhost:8080/GlobalSolution/rest/comentarioartigo/')
+    axios.get('http://localhost:8080/GlobalSolution/rest/comentarioartigo/comentariosartigo/' + dadosArtigo.id)
       .then(response => {
-        if (response.data === 200){
-          const comentariosFiltrados = response.data.filter(comentario => comentario.artigo.id === dadosArtigo.id);
-          setComentarios(comentariosFiltrados);
+        console.log(response)
+        if (response.status === 200){
+          setComentarios(response.data);
           setIsLoading(false)
-          if (comentariosFiltrados === 0) {
-            toast.info('Nenhuma comentário encontrado.');
-          }
-        } else {
-          return handleComentarios();
         }
       })
       .catch(error => {
