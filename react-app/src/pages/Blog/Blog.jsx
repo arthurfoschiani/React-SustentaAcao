@@ -58,31 +58,19 @@ export default function Blog() {
   }
 
   function loadArtigos() {
-    const cachedArtigos = sessionStorage.getItem('artigos');
-
-    if (cachedArtigos) {
-      setArtigos(JSON.parse(cachedArtigos));
-      setIsLoading(false);
-    } else {
-      axios.get('http://localhost:8080/GlobalSolution/rest/artigo/')
-        .then(response => {
-          if(response.status === 200) {
-            setArtigos(response.data);
-            sessionStorage.setItem('artigos', JSON.stringify(response.data));
-            setIsLoading(false)
-            if (response.data.length === 0) {
-              toast.info('Nenhum artigo encontrado.');
-            }
-          } else {
-            return loadArtigos();
-          }
-        })
-        .catch(error => {
-          console.error(error);
-          setIsLoading(false)
-          toast.error('Ocorreu ao carregar os artigos.');
-        });
-    }
+    axios.get('http://localhost:8080/GlobalSolution/rest/artigo/')
+      .then(response => {
+        setArtigos(response.data);
+        setIsLoading(false)
+        if (response.data.length === 0) {
+          toast.info('Nenhum artigo encontrado.');
+        }
+      })
+      .catch(error => {
+        console.error(error);
+        setIsLoading(false)
+        toast.error('Ocorreu ao carregar os artigos.');
+      });
   }
 
   function filterArtigos() {

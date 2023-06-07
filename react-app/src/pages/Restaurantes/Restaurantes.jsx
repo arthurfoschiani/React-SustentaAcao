@@ -40,7 +40,7 @@ export default function Restaurantes() {
     } else {
       axios.get('http://localhost:8080/GlobalSolution/rest/culinaria/')
         .then(response => {
-          if (response.status === 200) {
+          if (response.status === 200 && response.data !== []) {
             setCulinarias(response.data);
             sessionStorage.setItem('culinarias', JSON.stringify(response.data));
             if (response.data.length === 0) {
@@ -56,33 +56,26 @@ export default function Restaurantes() {
         });
     }
   }
-  
+
   function loadRestaurantes() {
-    const cachedRestaurantes = sessionStorage.getItem('restaurantes');
-    
-    if (cachedRestaurantes) {
-      setRestaurantes(JSON.parse(cachedRestaurantes));
-      setIsLoading(false);
-    } else {
-      axios.get('http://localhost:8080/GlobalSolution/rest/restaurantepraticasustentavel/')
-        .then(response => {
-          if (response.status === 200) {
-            setRestaurantes(response.data);
-            sessionStorage.setItem('restaurantes', JSON.stringify(response.data));
-            setIsLoading(false);
-            if (response.data.length === 0) {
-              toast.info('Nenhum restaurante encontrado.');
-            }
-          } else {
-            return loadRestaurantes()
-          }
-        })
-        .catch(error => {
-          console.error(error);
+    axios.get('http://localhost:8080/GlobalSolution/rest/restaurantepraticasustentavel/')
+      .then(response => {
+        console.log(response)
+        if (response.status === 200 && response.data !== []) {
+          setRestaurantes(response.data);
           setIsLoading(false);
-          toast.error('Ocorreu ao carregar os restaurantes.');
-        });
-    }
+          if (response.data.length === 0) {
+            toast.info('Nenhum restaurante encontrado.');
+          }
+        } else {
+          return loadRestaurantes()
+        }
+      })
+      .catch(error => {
+        console.error(error);
+        setIsLoading(false);
+        toast.error('Ocorreu ao carregar os restaurantes.');
+      });
   }
 
   function filterRestaurantes() {

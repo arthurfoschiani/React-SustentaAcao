@@ -44,7 +44,7 @@ export default function Artigo() {
     setIsLoading(true);
     axios.get('http://localhost:8080/GlobalSolution/rest/comentarioartigo/')
       .then(response => {
-        if (response.status === 200) {
+        if (response.data === 200){
           const comentariosFiltrados = response.data.filter(comentario => comentario.artigo.id === dadosArtigo.id);
           setComentarios(comentariosFiltrados);
           setIsLoading(false)
@@ -52,7 +52,7 @@ export default function Artigo() {
             toast.info('Nenhuma comentário encontrado.');
           }
         } else {
-          return handleComentarios()
+          return handleComentarios();
         }
       })
       .catch(error => {
@@ -62,11 +62,11 @@ export default function Artigo() {
       });
   }
 
-  
+
   useEffect(() => {
     handleCurtidas();
     handleComentarios();
-  }, [dadosArtigo.id, handleCurtidas, handleComentarios]);
+  }, [dadosArtigo.id]);
 
   const setCurtida = () => {
     let userData = sessionStorage.getItem('user')
