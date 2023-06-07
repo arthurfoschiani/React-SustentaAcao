@@ -111,7 +111,7 @@ export default function Home() {
                 <div className="banner">
                     <div>
                         <h2>Descubra práticas sustentáveis e ajude a alimentar o mundo.</h2>
-                        <a>Conhecer mais</a>
+                        <Link to="/blog">Conhecer mais</Link>
                     </div>
                     <img src="https://blush.design/api/download?shareUri=5erlmsVJI0brpVVe&c=Clothes_0%7Ee85d5d-0.1%7E323c84_Hair_0%7E50271b-0.1%7E50271b_Skin_0%7Ee88f70-0.1%7Ee88f70&w=800&h=800&fm=png" alt="Banner Imagem" />
                 </div>
