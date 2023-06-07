@@ -33,8 +33,6 @@ export default function Home() {
                     if (response.data.length === 0) {
                         toast.info('Nenhum restaurante encontrado.');
                     }
-                } else {
-                    return loadRestaurantes()
                 }
             })
             .catch(error => {
@@ -58,8 +56,6 @@ export default function Home() {
                         if (response.data.length === 0) {
                             toast.info('Nenhuma categoria encontrada.');
                         }
-                    } else {
-                        return loadRestaurantes()
                     }
                 })
                 .catch(error => {

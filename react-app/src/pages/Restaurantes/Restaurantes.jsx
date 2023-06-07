@@ -67,8 +67,6 @@ export default function Restaurantes() {
           if (response.data.length === 0) {
             toast.info('Nenhum restaurante encontrado.');
           }
-        } else {
-          return loadRestaurantes()
         }
       })
       .catch(error => {
